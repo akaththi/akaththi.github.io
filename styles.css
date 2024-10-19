@@ -169,7 +169,7 @@ button:active {
 
     button {
         font-size: 18px;
-        padding: 8px 16px;
+        padding: 10px 20px; /* Increase padding for tablets */
     }
 }
 
@@ -202,7 +202,7 @@ button:active {
     }
 
     button {
-        font-size: 16px;
-        padding: 6px 12px;
+        font-size: 18px; /* Increase font size for mobile */
+        padding: 10px 20px; /* Increase padding for mobile */
     }
 }
