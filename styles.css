@@ -158,8 +158,12 @@ button:active {
         box-shadow: none; /* Remove box-shadow for tablets */
     }
 
+    .card-no-border{
+        padding: 15px;
+    }
+
     .card-footer img {
-        max-width: 80px; /* Adjust maximum width for tablets */
+        max-width: 280px; /* Adjust maximum width for tablets */
         max-height: 80px; /* Adjust maximum height for tablets */
     }
 
@@ -188,9 +192,13 @@ button:active {
         box-shadow: none; /* Remove box-shadow for mobile */
     }
 
+    .card-no-border{
+        padding: 15px;
+    }
+
     .card-footer img {
-        max-width: 60px; /* Adjust maximum width for mobile */
-        max-height: 60px; /* Adjust maximum height for mobile */
+        max-width: 280px; /* Adjust maximum width for mobile */
+        max-height: 80px; /* Adjust maximum height for mobile */
     }
 
     button {
