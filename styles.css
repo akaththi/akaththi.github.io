@@ -26,6 +26,10 @@ p, div {
     font-family: 'Roboto', sans-serif;
 }
 
+img {
+    -webkit-user-drag: none;
+}
+
 .card {
     font-size: 20px;
     background-color: #ffffff;
