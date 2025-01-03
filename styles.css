@@ -116,6 +116,14 @@ img {
     transform: scale(1.1);
 }
 
+.address-title {
+    font-weight: 700;
+}
+
+.address {
+    font-weight: 400;
+}
+
 .phone:hover, .email:hover {
     transform: scale(1.1);
 }
