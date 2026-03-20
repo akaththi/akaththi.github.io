@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Finance STEP Intern — Akaththí Farms</title>
+<meta name="description" content="STEP Internship in Finance at Akaththí Farms. Work on real cost modelling, financial planning, and pricing analysis for a growing food startup in Chennai.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ3J83K6JX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FZ3J83K6JX');</script>
+<style>
+:root{--g:#1B3F20;--g2:#2E6636;--g3:#4A7C59;--bg:#EEF2E8;--w:#FFFFFF;--ink:#0E1A0F;--mid:#5A7062;--gold:#C49A20;--rule:rgba(27,63,32,.1);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;height:64px;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px;}
+.nav-left,.nav-right-links{list-style:none;display:flex;gap:22px;align-items:center;margin:0;padding:0;}
+.nav-right-links{justify-content:flex-end;}
+.nav-left a,.nav-right-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
+.nav-left a:hover,.nav-right-links a:hover,.nav-left a.active,.nav-right-links a.active{color:var(--g);}
+.nav-logo-center{display:flex;align-items:center;justify-content:center;text-decoration:none;}
+.nav-logo-center img{height:44px;width:auto;transition:transform .3s ease;}
+.nav-logo-center:hover img{transform:scale(1.06);}
+.nav-left-slot{display:flex;align-items:center;gap:20px;}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
+.nav-mobile{position:fixed;inset:0;background:var(--g);z-index:1000;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;padding:48px;}
+.nav-mobile.open{opacity:1;pointer-events:auto;}
+.nav-mobile-close{position:absolute;top:20px;left:24px;background:none;border:none;cursor:pointer;width:40px;height:40px;padding:6px;display:flex;flex-direction:column;justify-content:center;gap:0;}
+.nav-mobile-close span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.7);transform-origin:center;transition:background .2s;}
+.nav-mobile-close span:nth-child(1){transform:translateY(.75px) rotate(45deg);}
+.nav-mobile-close span:nth-child(2){transform:translateY(-.75px) rotate(-45deg);}
+.nav-mobile-close:hover span{background:#fff;}
+.nav-mobile-logo{position:absolute;top:14px;left:50%;transform:translateX(-50%);opacity:.55;}
+.nav-mobile-logo img{height:36px;width:auto;filter:brightness(0) invert(1);}
+.nav-mobile-links{list-style:none;padding:0;margin:0;}
+.nav-mobile-links a{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,10vw,64px);letter-spacing:.03em;color:#fff;text-decoration:none;display:block;padding:4px 0;line-height:1.15;transition:opacity .2s;}
+.nav-mobile-links a:hover{opacity:.6;}
+.nav-mobile-sep{height:1px;background:rgba(255,255,255,.15);margin:16px 0;width:60px;}
+.nav-mobile-contact{margin-top:40px;font-size:11px;font-weight:300;letter-spacing:.08em;color:rgba(255,255,255,.4);line-height:1.8;}
+.nav-mobile-sub{list-style:none;padding:0;margin:2px 0 6px 20px;}
+.nav-mobile-sub a{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:300;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;display:block;padding:7px 0;transition:color .2s;}
+.nav-mobile-sub a:hover{color:rgba(255,255,255,.85);}
+.nav-has-sub{position:relative;}
+.nav-sub{position:absolute;top:calc(100% + 10px);left:-16px;background:#fff;border:1px solid var(--rule);min-width:176px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease;z-index:10;}
+.nav-has-sub:hover .nav-sub,.nav-has-sub:focus-within .nav-sub{opacity:1;pointer-events:auto;transform:translateY(0);}
+.nav-sub li a{display:block;padding:10px 18px;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);white-space:nowrap;transition:color .2s;}
+.nav-sub li a:hover{color:var(--g);}
+.nav-sub li+li{border-top:1px solid var(--rule);}
+.lbl{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:18px;}
+.lbl-sq{width:9px;height:9px;background:var(--g2);flex-shrink:0;}
+footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content:space-between;align-items:flex-start;}
+.fl .logo{display:block;margin-bottom:14px;}.fl .logo img{width:160px;height:auto;display:block;}
+.fl p{font-size:12px;font-weight:300;color:rgba(255,255,255,.28);line-height:1.6;max-width:240px;}
+.flinks{display:flex;flex-direction:column;gap:10px;}
+.flinks a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.flinks a:hover{color:#fff;}
+.fc{text-align:right;}
+.fc p{font-size:13px;font-weight:300;color:rgba(255,255,255,.35);margin-bottom:6px;}
+.fc a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+.fc a:hover{color:#fff;}
+.fb{background:#000;padding:18px 52px;display:flex;justify-content:space-between;align-items:center;}
+.fb p{font-size:10px;font-weight:300;letter-spacing:.1em;color:rgba(255,255,255,.18);}
+.job-hero{background:var(--g);padding:120px 52px 80px;margin-top:64px;}
+.job-hero-inner{max-width:900px;margin:0 auto;}
+.job-program-lbl{font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:16px;}
+.job-hero-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);color:#fff;line-height:.88;letter-spacing:.01em;margin-bottom:22px;}
+.job-hero-hook{font-size:18px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.55);max-width:560px;}
+.job-details-bar{background:var(--ink);padding:0 52px;}
+.job-details-inner{max-width:900px;margin:0 auto;display:flex;gap:0;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.06);}
+.jd-item{padding:24px 32px 24px 0;display:flex;flex-direction:column;gap:5px;border-right:1px solid rgba(255,255,255,.06);margin-right:32px;}
+.jd-item:last-child{border-right:none;margin-right:0;}
+.jd-label{font-size:8.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+.jd-value{font-size:14px;font-weight:400;color:rgba(255,255,255,.75);}
+.job-content{padding:80px 52px;background:var(--w);}
+.job-content-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+.jc-section{margin-bottom:52px;}
+.jc-section:last-child{margin-bottom:0;}
+.jc-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,40px);color:var(--g);letter-spacing:.01em;line-height:.95;margin-bottom:22px;}
+.jc-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;}
+.jc-list li{font-size:15px;font-weight:300;line-height:1.85;color:var(--ink);padding-left:20px;position:relative;}
+.jc-list li::before{content:'';position:absolute;left:0;top:12px;width:7px;height:1.5px;background:var(--g2);}
+.jc-p{font-size:16px;font-weight:300;line-height:1.9;color:var(--ink);margin-bottom:16px;}
+.job-content-wide{padding:0 52px 80px;background:var(--w);}
+.job-content-wide-inner{max-width:900px;margin:0 auto;}
+.sec-apply{background:var(--bg);padding:100px 52px;}
+.apply-inner{max-width:640px;margin:0 auto;text-align:center;}
+.apply-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,72px);color:var(--g);line-height:.9;letter-spacing:.01em;margin-bottom:22px;}
+.apply-email{font-size:22px;font-weight:400;color:var(--g2);margin-bottom:24px;}
+.apply-email a{color:var(--g2);text-decoration:none;border-bottom:1.5px solid rgba(46,102,54,.3);padding-bottom:2px;transition:border-color .2s;}
+.apply-email a:hover{border-color:var(--g2);}
+.apply-subject{background:var(--ink);color:rgba(255,255,255,.7);font-family:'DM Sans',monospace;font-size:13px;padding:14px 20px;margin:20px 0 24px;text-align:left;letter-spacing:.02em;}
+.apply-subject span{color:rgba(255,255,255,.35);font-size:10px;letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:6px;}
+.apply-note{font-size:16px;font-weight:400;line-height:1.85;color:var(--ink);margin-bottom:16px;}
+.apply-fine{font-size:13px;font-weight:300;color:var(--mid);line-height:1.75;margin-top:28px;max-width:480px;margin-left:auto;margin-right:auto;}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:9.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42);text-decoration:none;margin-bottom:32px;transition:color .2s;}
+.back-link:hover{color:rgba(255,255,255,.75);}
+.back-arrow{font-size:12px;line-height:1;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+@media(max-width:980px){
+  nav{padding:0 20px;}
+  .nav-left,.nav-right-links{display:none;}
+  .nav-burger{display:flex;}
+  .job-hero,.job-details-bar,.job-content,.job-content-wide,.sec-apply{padding-left:20px!important;padding-right:20px!important;}
+  .job-content-inner{grid-template-columns:1fr;gap:40px;}
+  footer{flex-direction:column;gap:36px;}.fc{text-align:left;}
+  .fb{flex-direction:column;gap:8px;text-align:center;}
+}
+</style>
+</head>
+<body>
+<nav id="mainNav">
+  <div class="nav-left-slot">
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-left">
+      <li><a href="../produce.html">Produce</a></li>
+      <li class="nav-has-sub"><a href="../farms.html">Farms</a><ul class="nav-sub"><li><a href="../farms.html#how-we-grow">How We Grow</a></li><li><a href="../farms.html#polichalur">Polichalur Farm</a></li></ul></li>
+      <li><a href="../vision.html">Vision</a></li>
+    </ul>
+  </div>
+  <a href="../index.html" class="nav-logo-center"><img src="../images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms"></a>
+  <ul class="nav-right-links">
+    <li><a href="../recipes.html">Recipes</a></li>
+    <li><a href="../company.html">Company</a></li>
+    <li><a href="../join.html" class="active">Join Us</a></li>
+    <li><a href="../find.html">Find Us</a></li>
+  </ul>
+</nav>
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu"><span></span><span></span></button>
+  <a href="#" class="nav-mobile-logo"><img src="../images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms"></a>
+  <ul class="nav-mobile-links">
+    <li><a href="../produce.html" class="nav-mobile-link">Produce</a></li>
+    <li><a href="../farms.html" class="nav-mobile-link">Farms</a></li>
+    <li><a href="../vision.html" class="nav-mobile-link">Vision</a></li>
+    <li class="nav-mobile-sep"></li>
+    <li><a href="../recipes.html" class="nav-mobile-link">Recipes</a></li>
+    <li><a href="../company.html" class="nav-mobile-link">Company</a></li>
+    <li><a href="../join.html" class="nav-mobile-link">Join Us</a></li>
+    <li><a href="../find.html" class="nav-mobile-link">Find Us</a></li>
+  </ul>
+  <p class="nav-mobile-contact">connect@akaththifarms.com<br>+91 80564 02434</p>
+</div>
+
+<section class="job-hero">
+  <div class="job-hero-inner">
+    <a href="../join.html" class="back-link"><span class="back-arrow">←</span> All Openings</a>
+    <div class="job-program-lbl">STEP Internship Program</div>
+    <h1 class="job-hero-h">Finance</h1>
+    <p class="job-hero-hook">Learn what running a real food business looks like from the numbers up.</p>
+  </div>
+</section>
+
+<div class="job-details-bar">
+  <div class="job-details-inner">
+    <div class="jd-item"><span class="jd-label">Location</span><span class="jd-value">Chennai (Hybrid)</span></div>
+    <div class="jd-item"><span class="jd-label">Schedule</span><span class="jd-value">9 AM – 5 PM</span></div>
+    <div class="jd-item"><span class="jd-label">Duration</span><span class="jd-value">1 Month</span></div>
+    <div class="jd-item"><span class="jd-label">Intake</span><span class="jd-value">Rolling</span></div>
+    <div class="jd-item"><span class="jd-label">Compensation</span><span class="jd-value">Unpaid</span></div>
+  </div>
+</div>
+
+<section class="job-content">
+  <div class="job-content-inner">
+    <div class="reveal">
+      <div class="jc-section">
+        <h2 class="jc-h">What you'll<br>work on</h2>
+        <ul class="jc-list">
+          <li>Build and maintain cost models for grow cycles, product lines, and delivery operations</li>
+          <li>Maintain financial records and support month-end reporting</li>
+          <li>Research pricing benchmarks for premium mushrooms and fresh produce in Chennai</li>
+          <li>Support compliance documentation and basic tax preparation</li>
+          <li>Build financial models to evaluate new SKUs, markets, or initiatives</li>
+          <li>Help the founder understand unit economics as the business scales</li>
+        </ul>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="jc-section">
+        <h2 class="jc-h">What you'll<br>walk away with</h2>
+        <ul class="jc-list">
+          <li>STEP Internship Certificate</li>
+          <li>Real finance experience in a growing food startup — not a case study</li>
+          <li>Exposure to unit economics, cost structures, and supply-chain finance</li>
+          <li>Understanding of how a small producer manages cash flow and pricing</li>
+          <li>Direct founder access and visibility into business decisions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="job-content-wide">
+  <div class="job-content-wide-inner reveal">
+    <div style="border-top:1px solid var(--rule);padding-top:52px;">
+      <h2 class="jc-h" style="margin-bottom:16px;">Who can apply</h2>
+      <p class="jc-p">Students in B.Com, BBA, MBA, CA, or any finance-adjacent discipline. You need to be comfortable with spreadsheets and have an eye for numbers that don't quite add up. Interest in food, agriculture, or early-stage businesses is a genuine advantage.</p>
+      <ul class="jc-list" style="margin-top:16px;">
+        <li>Strong with spreadsheets (Excel or Google Sheets)</li>
+        <li>Basic understanding of financial statements, margins, and cost structures</li>
+        <li>Detail-oriented — errors in a cost model have real consequences here</li>
+        <li>Based in Chennai or able to work hybrid</li>
+      </ul>
+      <div style="margin-top:28px;padding:18px 22px;background:var(--bg);border-left:3px solid var(--g2);">
+        <p style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--g);margin-bottom:6px;">BYOD — Bring Your Own Device</p>
+        <p style="font-size:14px;font-weight:300;color:var(--mid);line-height:1.7;">You are expected to bring your own laptop. We provide software access, data, and context — not workstations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-apply">
+  <div class="apply-inner reveal">
+    <div class="lbl" style="justify-content:center;"><span class="lbl-sq"></span>How to Apply</div>
+    <h2 class="apply-h">Email us.</h2>
+    <p class="apply-email"><a href="mailto:job@akaththi.in">job@akaththi.in</a></p>
+    <div class="apply-subject">
+      <span>Subject line</span>
+      Application for Finance STEP Intern – Your Name
+    </div>
+    <p class="apply-note">Attach your resume and a cover letter. Tell us about a financial problem you've dug into — academic, personal, or professional. What drew you to finance, and why a food startup?</p>
+    <p class="apply-fine">We run STEP internships year-round. We're open to curious students and open-source contributors — not certificate collectors.</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script>fetch('../footer.html').then(r=>r.text()).then(h=>{
+  h=h.replace(/href="((?!http|#|mailto|tel)[^"]+)"/g,(m,p)=>'href="../'+p+'"').replace(/src="((?!http|data)[^"]+)"/g,(m,p)=>'src="../'+p+'"');
+  document.getElementById('site-footer').outerHTML=h;
+});</script>
+<script>
+const navBurger=document.getElementById('navBurger');
+const navMobile=document.getElementById('navMobile');
+const navMobileClose=document.getElementById('navMobileClose');
+function closeMobileNav(){navMobile.classList.remove('open');navBurger.setAttribute('aria-expanded','false');navMobile.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+navBurger.addEventListener('click',()=>{const open=navMobile.classList.toggle('open');navBurger.setAttribute('aria-expanded',String(open));navMobile.setAttribute('aria-hidden',String(!open));document.body.style.overflow=open?'hidden':'';});
+navMobileClose.addEventListener('click',closeMobileNav);
+document.querySelectorAll('.nav-mobile-link').forEach(l=>l.addEventListener('click',closeMobileNav));
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav();});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

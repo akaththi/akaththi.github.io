@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Farms — Akaththí Farms</title>
+<meta name="description" content="How we grow. From substrate to shelf, every step is deliberate. Explore our controlled growing environment in Tamil Nadu.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ3J83K6JX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FZ3J83K6JX');</script>
+<style>
+:root{
+  --g:#1B3F20;--g2:#2E6636;--g3:#4A7C59;--bg:#EEF2E8;--w:#FFFFFF;--ink:#0E1A0F;--mid:#5A7062;--gold:#C49A20;--rule:rgba(27,63,32,.1);
+  --fh:clamp(64px,9.5vw,140px);
+  --f2:clamp(42px,5.8vw,80px);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:999;height:64px;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:.13em;color:var(--g);text-decoration:none;}
+.nav-left,.nav-right-links{list-style:none;display:flex;gap:22px;align-items:center;margin:0;padding:0;}
+.nav-right-links{justify-content:flex-end;}
+.nav-left a,.nav-right-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
+.nav-left a:hover,.nav-right-links a:hover,.nav-left a.active,.nav-right-links a.active{color:var(--g);}
+.nav-logo-center{display:flex;align-items:center;justify-content:center;text-decoration:none;}
+.nav-logo-center img{height:44px;width:auto;transition:transform .3s ease;}
+.nav-logo-center:hover img{transform:scale(1.06);}
+.nav-left-slot{display:flex;align-items:center;gap:20px;}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
+.nav-mobile{position:fixed;inset:0;background:var(--g);z-index:1000;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;padding:48px;}
+.nav-mobile.open{opacity:1;pointer-events:auto;}
+.nav-mobile-close{position:absolute;top:20px;left:24px;background:none;border:none;cursor:pointer;width:40px;height:40px;padding:6px;display:flex;flex-direction:column;justify-content:center;gap:0;}
+.nav-mobile-close span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.7);transform-origin:center;transition:background .2s;}
+.nav-mobile-close span:nth-child(1){transform:translateY(.75px) rotate(45deg);}
+.nav-mobile-close span:nth-child(2){transform:translateY(-.75px) rotate(-45deg);}
+.nav-mobile-close:hover span{background:#fff;}
+.nav-mobile-logo{position:absolute;top:14px;left:50%;transform:translateX(-50%);opacity:.55;}
+.nav-mobile-logo img{height:36px;width:auto;filter:brightness(0) invert(1);}
+.nav-mobile-links{list-style:none;padding:0;margin:0;}
+.nav-mobile-links a{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,10vw,64px);letter-spacing:.03em;color:#fff;text-decoration:none;display:block;padding:4px 0;line-height:1.15;transition:opacity .2s;}
+.nav-mobile-links a:hover{opacity:.6;}
+.nav-mobile-sep{height:1px;background:rgba(255,255,255,.15);margin:16px 0;width:60px;}
+.nav-mobile-contact{margin-top:40px;font-size:11px;font-weight:300;letter-spacing:.08em;color:rgba(255,255,255,.4);line-height:1.8;}
+.nav-mobile-sub{list-style:none;padding:0;margin:2px 0 6px 20px;}
+.nav-mobile-sub a{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:300;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;display:block;padding:7px 0;transition:color .2s;}
+.nav-mobile-sub a:hover{color:rgba(255,255,255,.85);}
+/* ── Dropdown submenu ── */
+.nav-has-sub{position:relative;}
+.nav-sub{position:absolute;top:calc(100% + 10px);left:-16px;background:#fff;border:1px solid var(--rule);min-width:176px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease;z-index:10;}
+.nav-has-sub:hover .nav-sub,.nav-has-sub:focus-within .nav-sub{opacity:1;pointer-events:auto;transform:translateY(0);}
+.nav-sub li a{display:block;padding:10px 18px;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);white-space:nowrap;transition:color .2s;}
+.nav-sub li a:hover{color:var(--g);}
+.nav-sub li+li{border-top:1px solid var(--rule);}
+
+.btn{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:14px 28px;transition:all .22s;border:none;cursor:pointer;}
+.btn-solid{background:var(--g2);color:#fff;}.btn-solid:hover{background:var(--g);}
+.btn-ghost{background:transparent;color:var(--g2);border:1.5px solid var(--g2);}.btn-ghost:hover{background:var(--g2);color:#fff;}
+.btn-ghost-w{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.38);}.btn-ghost-w:hover{background:#fff;color:var(--g);}
+.lbl{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:18px;}
+.lbl-sq{width:9px;height:9px;background:var(--g2);flex-shrink:0;}
+
+/* FOOTER */
+footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content:space-between;align-items:flex-start;}
+.fl .logo{display:block;margin-bottom:14px;}.fl .logo img{width:160px;height:auto;display:block;}
+.fl p{font-size:12px;font-weight:300;color:rgba(255,255,255,.28);line-height:1.6;max-width:240px;}
+.flinks{display:flex;flex-direction:column;gap:10px;}
+.flinks a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.flinks a:hover{color:#fff;}
+.fc{text-align:right;}
+.fc p{font-size:13px;font-weight:300;color:rgba(255,255,255,.35);margin-bottom:6px;}
+.fc a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+.fc a:hover{color:#fff;}
+.fb{background:#000;padding:18px 52px;display:flex;justify-content:space-between;align-items:center;}
+.fb p{font-size:10px;font-weight:300;letter-spacing:.1em;color:rgba(255,255,255,.18);}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+.page-hero{padding:120px 52px 80px;margin-top:64px;background:var(--bg);}
+.page-hero-inner{max-width:1200px;margin:0 auto;}
+.page-hero-lbl{margin-bottom:16px;}
+.page-hero-h{font-family:'Bebas Neue',sans-serif;font-size:var(--fh);color:var(--g);line-height:.88;letter-spacing:.01em;margin-bottom:20px;}
+.page-hero-sub{font-size:18px;font-weight:300;line-height:1.7;color:var(--mid);max-width:560px;}
+
+/* ── § GROW ── */
+.sec-grow{background:var(--g);padding:120px 52px;}
+.grow-inner{max-width:1200px;margin:0 auto;}
+.grow-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;gap:40px;}
+.grow-h{font-family:'Bebas Neue',sans-serif;font-size:var(--f2);color:#fff;line-height:.9;letter-spacing:.01em;}
+.grow-note{font-size:16px;font-weight:300;color:rgba(255,255,255,.42);max-width:300px;line-height:1.7;text-align:right;}
+.grow-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.gc{background:rgba(255,255,255,.04);padding:40px 32px;position:relative;border-top:3px solid rgba(255,255,255,.07);transition:all .25s;}
+.gc:hover{background:rgba(255,255,255,.08);border-top-color:var(--g2);}
+.gc-n{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.18);position:absolute;top:18px;right:20px;}
+.gc-tag{display:inline-block;padding:3px 9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:8px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.36);margin-bottom:14px;}
+.gc-title{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.02em;color:#fff;margin-bottom:10px;line-height:1;}
+.gc-body{font-size:13px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.4);}
+.sec-grow .lbl{color:rgba(255,255,255,.38);}.sec-grow .lbl-sq{background:rgba(255,255,255,.2);}
+.grow-foot{margin-top:44px;padding-top:32px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;}
+.grow-foot p{font-size:14px;font-weight:300;color:rgba(255,255,255,.36);max-width:500px;line-height:1.6;}
+
+/* ── § KAANI ── */
+.sec-kaani{background:var(--w);padding:120px 52px;}
+.kaani-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;}
+.kaani-h{font-family:'Bebas Neue',sans-serif;font-size:var(--f2);color:var(--g);line-height:.9;letter-spacing:.01em;margin-bottom:22px;}
+.kaani-p{font-size:17px;font-weight:300;line-height:1.8;color:var(--mid);margin-bottom:18px;}
+.kaani-p strong{font-weight:500;color:var(--ink);}
+.kaani-r{display:flex;flex-direction:column;gap:2px;}
+.kc{background:var(--bg);padding:26px 30px;border-left:3px solid transparent;transition:all .28s;}
+.kc:hover{border-left-color:var(--g2);background:var(--w);box-shadow:0 4px 24px rgba(0,0,0,.06);}
+.kc-t{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.03em;color:var(--g);margin-bottom:6px;}
+.kc-b{font-size:13px;font-weight:300;line-height:1.65;color:var(--mid);}
+
+.sec-polichalur{background:var(--bg);padding:120px 52px;}
+.pol-inner{max-width:760px;margin:0 auto;}
+.pol-h{font-family:'Bebas Neue',sans-serif;font-size:var(--f2);color:var(--g);line-height:.9;letter-spacing:.01em;margin-bottom:10px;}
+.pol-hub{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--g3);margin-bottom:28px;}
+.pol-p{font-size:17px;font-weight:300;line-height:1.8;color:var(--mid);margin-bottom:18px;}
+
+@media(max-width:980px){
+  nav{padding:0 20px;}
+  .nav-left,.nav-right-links{display:none;}
+  .nav-burger{display:flex;}
+  .nav-mobile-logo,.nav-mobile-close{display:flex;}
+  .cform-row{grid-template-columns:1fr;}
+  .recipes-grid,.news-grid,.insta-grid{grid-template-columns:repeat(2,1fr);}
+  .recipes-hdr,.news-hdr,.insta-hdr{flex-direction:column;gap:10px;align-items:flex-start;}
+  .sec-recipes,.sec-news,.sec-insta{padding:72px 20px;}
+  .modal-box{padding:36px 24px;}
+  .cform-row{grid-template-columns:1fr;}
+  .hl,.hl-fg{padding:0 20px 96px;}
+  .hero-bar{padding:0 20px;height:100px;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;}
+  .ticker{display:none;}.mush{width:88vw;right:-6%;}
+  .ctrl{left:20px;}.arr-wrap{right:20px;}
+  .s-plain,.s-dark,.s-cream{padding:0 20px;}
+  .sec-mission{grid-template-columns:1fr;}
+  .pillar{border-right:none;border-bottom:1px solid var(--rule);}
+  .intro-inner{grid-template-columns:1fr;gap:20px;}
+  .grow-head{flex-direction:column;gap:16px;}.grow-note{text-align:left;}
+  .grow-cards{grid-template-columns:1fr;}
+  .var-head,.kaani-inner{grid-template-columns:1fr;gap:24px;}
+  .var-grid{grid-template-columns:repeat(2,1fr);}
+  .var-grid-3{grid-template-columns:repeat(2,1fr);}
+  footer{flex-direction:column;gap:36px;}.fc{text-align:left;}
+  .fb{flex-direction:column;gap:8px;text-align:center;}
+  .grow-foot{flex-direction:column;gap:16px;}
+  section{padding-left:20px!important;padding-right:20px!important;}
+}
+@media(max-width:580px){.var-grid,.var-grid-3{grid-template-columns:1fr;}}
+@media(max-width:580px){.page-hero{padding:80px 20px 60px;}}
+</style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <div class="nav-left-slot">
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-left">
+      <li><a href="produce.html">Produce</a></li>
+      <li class="nav-has-sub">
+        <a href="farms.html" class="active">Farms</a>
+        <ul class="nav-sub">
+          <li><a href="farms.html#how-we-grow">How We Grow</a></li>
+          <li><a href="farms.html#polichalur">Polichalur Farm</a></li>
+        </ul>
+      </li>
+      <li><a href="vision.html">Vision</a></li>
+    </ul>
+  </div>
+  <a href="index.html" class="nav-logo-center" aria-label="Akaththi Farms home">
+    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
+  </a>
+  <ul class="nav-right-links">
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="company.html">Company</a></li>
+    <li><a href="join.html">Join Us</a></li>
+    <li><a href="find.html">Find Us</a></li>
+  </ul>
+</nav>
+
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">
+    <span></span><span></span>
+  </button>
+  <a href="index.html" class="nav-mobile-logo">
+    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
+  </a>
+  <ul class="nav-mobile-links">
+    <li><a href="produce.html" class="nav-mobile-link">Produce</a></li>
+    <li>
+      <a href="farms.html" class="nav-mobile-link">Farms</a>
+      <ul class="nav-mobile-sub">
+        <li><a href="farms.html#how-we-grow" class="nav-mobile-link">How We Grow</a></li>
+        <li><a href="farms.html#polichalur" class="nav-mobile-link">Polichalur Farm</a></li>
+      </ul>
+    </li>
+    <li><a href="vision.html" class="nav-mobile-link">Vision</a></li>
+    <li class="nav-mobile-sep"></li>
+    <li><a href="recipes.html" class="nav-mobile-link">Recipes</a></li>
+    <li><a href="company.html" class="nav-mobile-link">Company</a></li>
+    <li><a href="join.html" class="nav-mobile-link">Join Us</a></li>
+    <li><a href="find.html" class="nav-mobile-link">Find Us</a></li>
+  </ul>
+  <p class="nav-mobile-contact">connect@akaththifarms.com<br>+91 80564 02434</p>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="lbl"><span class="lbl-sq"></span>Process</div>
+    <h1 class="page-hero-h">How we<br>grow.</h1>
+    <p class="page-hero-sub">Powered by KAANI — our farm operating system. From strain culture to harvest, every batch runs on data, not guesswork.</p>
+  </div>
+</section>
+
+<section class="sec-grow" id="how-we-grow">
+  <div class="grow-inner">
+    <div class="grow-head reveal">
+      <div>
+        <div class="lbl" style="color:rgba(255,255,255,.38);"><span class="lbl-sq" style="background:rgba(255,255,255,.2);"></span>Process</div>
+        <h2 class="grow-h">How we grow<br>our mushrooms.</h2>
+      </div>
+      <p class="grow-note">Three steps. Nothing skipped. Nothing outsourced.</p>
+    </div>
+    <div class="grow-cards reveal">
+      <div class="gc"><span class="gc-n">01</span><div class="gc-tag">Strain Culture</div><div class="gc-title">Spawn it.</div><p class="gc-body">Our cultures are developed in-house — strain-specific, formulated for our substrate and climate. It's where quality starts. Long before a spore enters a POD, the work has already begun.</p></div>
+      <div class="gc"><span class="gc-n">02</span><div class="gc-tag">POD</div><div class="gc-title">Grow it.</div><p class="gc-body">Each POD holds its own climate — temperature, humidity, CO₂ — set for the variety inside. Batches don't share space. What happens in one doesn't affect another.</p></div>
+      <div class="gc"><span class="gc-n">03</span><div class="gc-tag">KAANI Intelligence</div><div class="gc-title">Track it.</div><p class="gc-body">Sensor data runs continuously through KAANI. Growth patterns, deviations, harvest readiness — all of it visible, all of it logged. The mushroom tells you when it's ready. We just listen.</p></div>
+    </div>
+    <div class="grow-foot reveal">
+      <p>Start to finish, every batch has a record. That's what makes it repeatable — and what makes it worth trusting.</p>
+      <a href="#kaani" class="btn btn-ghost-w" style="flex-shrink:0">KAANI Intelligence →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-kaani" id="kaani">
+  <div class="kaani-inner">
+    <div class="reveal">
+      <div class="lbl"><span class="lbl-sq"></span>Technology</div>
+      <h2 class="kaani-h">KAANI<br>Intelligence.</h2>
+      <p class="kaani-p">Vertical farming has a cost problem. Infrastructure that scales fast. Operations that compound faster. KAANI was built to change that equation — an indigenous farm operating system that runs lean, thinks locally, and grows with you.</p>
+      <p class="kaani-p">Node. Edge. Cloud. <strong>Each layer designed to operate alone if it has to.</strong> Power drops. Connections break. KAANI was designed for that reality — the edge holds when the cloud can't reach, the node holds when everything else goes down. The crop never feels it.</p>
+      <p class="kaani-p">And because we control every condition, we can grow what the land here wouldn't otherwise allow. Varieties that need cold. Varieties that need precision. Grown sustainably, year after year — not despite our climate, but independent of it.</p>
+    </div>
+    <div class="kaani-r reveal">
+      <div class="kc"><div class="kc-t">Node · Edge · Cloud</div><p class="kc-b">Intelligence lives close to life. Nodes sense inside every POD. Edge processors think on-site, without waiting. The cloud learns across every farm, every season. Three layers that trust each other — so you can trust what comes out.</p></div>
+      <div class="kc"><div class="kc-t">Indigenous Hybrid Cooling</div><p class="kc-b">Our summers are unforgiving. We built our cooling system knowing that — a hybrid approach, engineered in-house, that keeps each POD in its own precise world. The mushroom doesn't know it's forty degrees outside. That's the point.</p></div>
+      <div class="kc"><div class="kc-t">Indigenous Micro-Farm Architecture</div><p class="kc-b">Nothing in a POD was borrowed. Every dimension, every airflow path, every substrate surface was designed around how mushrooms actually grow. It shows in the consistency. It shows in the flavour.</p></div>
+      <div class="kc"><div class="kc-t">AI-Embedded Architecture</div><p class="kc-b">The intelligence doesn't sit at a distance making remote decisions. It runs at every layer — learning from each batch, reading readiness before a human would notice, flagging what doesn't look right before it becomes a problem.</p></div>
+      <div class="kc"><div class="kc-t">Distributed Farm Operations</div><p class="kc-b">KAANI was built to outlast a single farm. Bring a new location online — the system already speaks the language. One operating layer, many farms, anywhere. The vision was always bigger than Polichalur.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-polichalur" id="polichalur">
+  <div class="pol-inner">
+    <div class="reveal">
+      <div class="lbl"><span class="lbl-sq"></span>Our Farm</div>
+      <h2 class="pol-h">Polichalur<br>Farm.</h2>
+      <p class="pol-hub">Cultivation &amp; Research Hub</p>
+      <p class="pol-p">Polichalur is where we start. Our mycology lab, our PODs, our substrate formulation — all under one roof in Tamil Nadu. This is where KAANI Intelligence runs 24/7, where strain cultures are developed, and where every batch begins its record.</p>
+      <p class="pol-p">Akaththí Farms Private Limited is registered in Salem, Tamil Nadu. But the thinking here was never local. Every system we've built — the architecture, the intelligence, the farm design — was made to travel. Polichalur is farm one.</p>
+      <a href="find.html#partner" class="btn btn-ghost" style="margin-top:12px">Partner with us →</a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script>fetch('footer.html').then(r=>r.text()).then(h=>{document.getElementById('site-footer').outerHTML=h;});</script>
+
+<script>
+const navBurger=document.getElementById('navBurger');
+const navMobile=document.getElementById('navMobile');
+const navMobileClose=document.getElementById('navMobileClose');
+function closeMobileNav(){
+  navMobile.classList.remove('open');
+  navBurger.setAttribute('aria-expanded','false');
+  navMobile.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+navBurger.addEventListener('click',()=>{
+  const open=navMobile.classList.toggle('open');
+  navBurger.setAttribute('aria-expanded',String(open));
+  navMobile.setAttribute('aria-hidden',String(!open));
+  document.body.style.overflow=open?'hidden':'';
+});
+navMobileClose.addEventListener('click',closeMobileNav);
+document.querySelectorAll('.nav-mobile-link').forEach(link=>{
+  link.addEventListener('click',closeMobileNav);
+});
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav();});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

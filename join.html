@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Join Us — Akaththí Farms</title>
+<meta name="description" content="Careers and workshops at Akaththí Farms. STEP internships in mycology and branding, plus hands-on cultivation workshops in Chennai.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ3J83K6JX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FZ3J83K6JX');</script>
+<style>
+:root{
+  --g:#1B3F20;--g2:#2E6636;--g3:#4A7C59;--bg:#EEF2E8;--w:#FFFFFF;--ink:#0E1A0F;--mid:#5A7062;--gold:#C49A20;--rule:rgba(27,63,32,.1);
+  --fh:clamp(64px,9.5vw,140px);
+  --f2:clamp(42px,5.8vw,80px);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:999;height:64px;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px;}
+.nav-left,.nav-right-links{list-style:none;display:flex;gap:22px;align-items:center;margin:0;padding:0;}
+.nav-right-links{justify-content:flex-end;}
+.nav-left a,.nav-right-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
+.nav-left a:hover,.nav-right-links a:hover,.nav-left a.active,.nav-right-links a.active{color:var(--g);}
+.nav-logo-center{display:flex;align-items:center;justify-content:center;text-decoration:none;}
+.nav-logo-center img{height:44px;width:auto;transition:transform .3s ease;}
+.nav-logo-center:hover img{transform:scale(1.06);}
+.nav-left-slot{display:flex;align-items:center;gap:20px;}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
+.nav-mobile{position:fixed;inset:0;background:var(--g);z-index:1000;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;padding:48px;}
+.nav-mobile.open{opacity:1;pointer-events:auto;}
+.nav-mobile-close{position:absolute;top:20px;left:24px;background:none;border:none;cursor:pointer;width:40px;height:40px;padding:6px;display:flex;flex-direction:column;justify-content:center;gap:0;}
+.nav-mobile-close span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.7);transform-origin:center;transition:background .2s;}
+.nav-mobile-close span:nth-child(1){transform:translateY(.75px) rotate(45deg);}
+.nav-mobile-close span:nth-child(2){transform:translateY(-.75px) rotate(-45deg);}
+.nav-mobile-close:hover span{background:#fff;}
+.nav-mobile-logo{position:absolute;top:14px;left:50%;transform:translateX(-50%);opacity:.55;}
+.nav-mobile-logo img{height:36px;width:auto;filter:brightness(0) invert(1);}
+.nav-mobile-links{list-style:none;padding:0;margin:0;}
+.nav-mobile-links a{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,10vw,64px);letter-spacing:.03em;color:#fff;text-decoration:none;display:block;padding:4px 0;line-height:1.15;transition:opacity .2s;}
+.nav-mobile-links a:hover{opacity:.6;}
+.nav-mobile-sep{height:1px;background:rgba(255,255,255,.15);margin:16px 0;width:60px;}
+.nav-mobile-contact{margin-top:40px;font-size:11px;font-weight:300;letter-spacing:.08em;color:rgba(255,255,255,.4);line-height:1.8;}
+.nav-mobile-sub{list-style:none;padding:0;margin:2px 0 6px 20px;}
+.nav-mobile-sub a{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:300;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;display:block;padding:7px 0;transition:color .2s;}
+.nav-mobile-sub a:hover{color:rgba(255,255,255,.85);}
+.nav-has-sub{position:relative;}
+.nav-sub{position:absolute;top:calc(100% + 10px);left:-16px;background:#fff;border:1px solid var(--rule);min-width:176px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease;z-index:10;}
+.nav-has-sub:hover .nav-sub,.nav-has-sub:focus-within .nav-sub{opacity:1;pointer-events:auto;transform:translateY(0);}
+.nav-sub li a{display:block;padding:10px 18px;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);white-space:nowrap;transition:color .2s;}
+.nav-sub li a:hover{color:var(--g);}
+.nav-sub li+li{border-top:1px solid var(--rule);}
+
+.lbl{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:18px;}
+.lbl-sq{width:9px;height:9px;background:var(--g2);flex-shrink:0;}
+
+/* FOOTER */
+footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content:space-between;align-items:flex-start;}
+.fl .logo{display:block;margin-bottom:14px;}.fl .logo img{width:160px;height:auto;display:block;}
+.fl p{font-size:12px;font-weight:300;color:rgba(255,255,255,.28);line-height:1.6;max-width:240px;}
+.flinks{display:flex;flex-direction:column;gap:10px;}
+.flinks a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.flinks a:hover{color:#fff;}
+.fc{text-align:right;}
+.fc p{font-size:13px;font-weight:300;color:rgba(255,255,255,.35);margin-bottom:6px;}
+.fc a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+.fc a:hover{color:#fff;}
+.fb{background:#000;padding:18px 52px;display:flex;justify-content:space-between;align-items:center;}
+.fb p{font-size:10px;font-weight:300;letter-spacing:.1em;color:rgba(255,255,255,.18);}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* ── HERO */
+.page-hero{padding:120px 52px 80px;margin-top:64px;background:var(--g);}
+.page-hero-inner{max-width:1200px;margin:0 auto;}
+.page-hero-h{font-family:'Bebas Neue',sans-serif;font-size:var(--fh);line-height:.88;letter-spacing:.01em;margin-bottom:20px;}
+.page-hero-sub{font-size:18px;font-weight:300;line-height:1.7;max-width:560px;}
+
+/* ── JOB CARDS */
+.sec-jobs{background:var(--w);padding:100px 52px;}
+.sec-jobs-inner{max-width:1200px;margin:0 auto;}
+.jobs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:52px;}
+@media(max-width:980px){.jobs-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:580px){.jobs-grid{grid-template-columns:1fr;}}
+
+.jc{background:var(--bg);padding:36px 32px 30px;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .32s cubic-bezier(.22,1,.36,1),box-shadow .32s ease,background .2s;border-bottom:3px solid transparent;}
+.jc:hover{transform:translateY(-5px);box-shadow:0 20px 52px rgba(0,0,0,.11);border-bottom-color:var(--g2);background:#fff;}
+.jc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+.jc-top .lbl{margin-bottom:0;}
+.jc-badge{font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;background:var(--g);color:#fff;padding:5px 10px;}
+.jc-title{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:.02em;color:var(--g);line-height:.95;margin-bottom:8px;}
+.jc-role{font-size:11.5px;font-weight:400;letter-spacing:.03em;color:var(--g3);margin-bottom:14px;line-height:1.55;}
+.jc-tagline{font-size:15px;font-weight:400;line-height:1.75;color:var(--ink);flex:1;margin-bottom:22px;}
+.jc-meta{display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:10.5px;font-weight:400;letter-spacing:.05em;color:var(--mid);margin-bottom:22px;border-top:1px solid var(--rule);padding-top:16px;}
+.jc-dot{width:3px;height:3px;border-radius:50%;background:currentColor;opacity:.35;}
+.jc-open{display:inline-flex;align-items:center;gap:7px;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--g2);transition:color .2s,gap .2s;}
+.jc-open-arrow{font-size:13px;transition:transform .2s;}
+.jc:hover .jc-open{color:var(--g);}
+.jc:hover .jc-open-arrow{transform:translateX(4px);}
+
+/* ── WORKSHOPS */
+.sec-workshops{background:var(--bg);padding:100px 52px;}
+.sec-workshops-inner{max-width:1200px;margin:0 auto;}
+.workshops-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:52px;}
+@media(max-width:720px){.workshops-grid{grid-template-columns:1fr;}}
+
+.wc{background:var(--ink);padding:52px 44px;display:flex;flex-direction:column;}
+.wc-badge{font-size:8px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:7px;}
+.wc-badge::before{content:'';display:inline-block;width:7px;height:7px;background:var(--gold);flex-shrink:0;}
+.wc-price{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,6vw,76px);color:#fff;line-height:1;letter-spacing:.01em;margin-bottom:4px;}
+.wc-duration{font-size:9.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:32px;}
+.wc-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;flex:1;margin-bottom:32px;}
+.wc-list li{font-size:14px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.82);padding-left:18px;position:relative;}
+.wc-list li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:1.5px;background:var(--g3);}
+.wc-cert{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding-top:22px;border-top:1px solid rgba(255,255,255,.1);line-height:1.65;}
+.wc-cert span{display:block;font-size:8.5px;color:rgba(255,255,255,.3);letter-spacing:.18em;margin-bottom:6px;}
+.wc-cta{margin-top:32px;display:inline-flex;align-items:center;gap:10px;background:var(--g2);color:#fff;font-size:9.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:14px 22px;text-decoration:none;align-self:flex-start;transition:background .2s;}
+.wc-cta:hover{background:var(--g3);}
+
+/* ── BOTTOM CTA */
+.sec-bottom-cta{background:var(--g);padding:100px 52px;}
+.bottom-cta-inner{max-width:600px;margin:0 auto;text-align:center;}
+.bottom-cta-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,96px);color:#fff;line-height:.88;letter-spacing:.01em;margin-bottom:18px;}
+.bottom-cta-p{font-size:17px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.6);margin-bottom:36px;}
+.bottom-cta-email{font-size:clamp(22px,3.5vw,32px);font-weight:400;margin-bottom:4px;}
+.bottom-cta-email a{color:#fff;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.35);padding-bottom:3px;transition:border-color .2s;}
+.bottom-cta-email a:hover{border-color:#fff;}
+.bottom-cta-subject{background:rgba(0,0,0,.25);font-family:'DM Sans',monospace;font-size:13px;padding:14px 20px;margin:28px auto 0;max-width:460px;text-align:left;color:rgba(255,255,255,.65);letter-spacing:.02em;}
+.bottom-cta-subject span{display:block;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:6px;}
+.bottom-cta-note{font-size:15px;font-weight:400;color:rgba(255,255,255,.9);line-height:1.75;margin-top:24px;}
+
+@media(max-width:980px){
+  nav{padding:0 20px;}
+  .nav-left,.nav-right-links{display:none;}
+  .nav-burger{display:flex;}
+  footer{flex-direction:column;gap:36px;}.fc{text-align:left;}
+  .fb{flex-direction:column;gap:8px;text-align:center;}
+  section{padding-left:20px!important;padding-right:20px!important;}
+  .sec-always,.sec-bottom-cta{padding-left:20px!important;padding-right:20px!important;}
+  .always-inner{grid-template-columns:1fr!important;gap:32px!important;}
+}
+</style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <div class="nav-left-slot">
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-left">
+      <li><a href="produce.html">Produce</a></li>
+      <li class="nav-has-sub">
+        <a href="farms.html">Farms</a>
+        <ul class="nav-sub">
+          <li><a href="farms.html#how-we-grow">How We Grow</a></li>
+          <li><a href="farms.html#polichalur">Polichalur Farm</a></li>
+        </ul>
+      </li>
+      <li><a href="vision.html">Vision</a></li>
+    </ul>
+  </div>
+  <a href="index.html" class="nav-logo-center" aria-label="Akaththi Farms home">
+    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
+  </a>
+  <ul class="nav-right-links">
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="company.html">Company</a></li>
+    <li><a href="join.html" class="active">Join Us</a></li>
+    <li><a href="find.html">Find Us</a></li>
+  </ul>
+</nav>
+
+<!-- Mobile Navigation Overlay -->
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">
+    <span></span><span></span>
+  </button>
+  <a href="#" class="nav-mobile-logo">
+    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
+  </a>
+  <ul class="nav-mobile-links">
+    <li><a href="produce.html" class="nav-mobile-link">Produce</a></li>
+    <li>
+      <a href="farms.html" class="nav-mobile-link">Farms</a>
+      <ul class="nav-mobile-sub">
+        <li><a href="farms.html#how-we-grow" class="nav-mobile-link">How We Grow</a></li>
+        <li><a href="farms.html#polichalur" class="nav-mobile-link">Polichalur Farm</a></li>
+      </ul>
+    </li>
+    <li><a href="vision.html" class="nav-mobile-link">Vision</a></li>
+    <li class="nav-mobile-sep"></li>
+    <li><a href="recipes.html" class="nav-mobile-link">Recipes</a></li>
+    <li><a href="company.html" class="nav-mobile-link">Company</a></li>
+    <li><a href="join.html" class="nav-mobile-link">Join Us</a></li>
+    <li><a href="find.html" class="nav-mobile-link">Find Us</a></li>
+  </ul>
+  <p class="nav-mobile-contact">connect@akaththifarms.com<br>+91 80564 02434</p>
+</div>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="lbl" style="color:rgba(255,255,255,.42);"><span class="lbl-sq" style="background:rgba(255,255,255,.22);"></span>Careers</div>
+    <h1 class="page-hero-h" style="color:#fff;">Grow<br>with us.</h1>
+    <p class="page-hero-sub" style="color:rgba(255,255,255,.5);">We're building something real — a farm, a brand, and an idea. If you want to work on hard problems in food, science, and sustainability, this is your place.</p>
+  </div>
+</section>
+
+<!-- Intro statement -->
+<section style="background:var(--bg);padding:80px 52px;">
+  <div style="max-width:780px;margin:0 auto;text-align:center;">
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,3.2vw,34px);font-weight:300;line-height:1.55;color:var(--ink);">We don't hire for roles. We hire for curiosity, craft, and the willingness to get your hands in the substrate.</p>
+  </div>
+</section>
+
+<!-- Open Positions -->
+<section class="sec-jobs" id="openings">
+  <div class="sec-jobs-inner">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div>
+        <div class="lbl"><span class="lbl-sq"></span>Open Positions</div>
+        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);letter-spacing:.01em;color:var(--g);line-height:.9;">Current openings</h2>
+      </div>
+      <p id="jobs-count" style="font-size:13px;font-weight:300;color:var(--mid);"></p>
+    </div>
+    <div class="jobs-grid" id="jobs-grid"></div>
+  </div>
+</section>
+
+<!-- Always Open -->
+<section style="background:var(--g);padding:80px 52px;">
+  <div class="always-inner" style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+    <div>
+      <div class="lbl" style="color:rgba(255,255,255,.42);"><span class="lbl-sq" style="background:rgba(255,255,255,.2);"></span>Always Open</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);letter-spacing:.01em;color:#fff;line-height:.9;margin-bottom:20px;">Internships<br>don't close here.</h2>
+    </div>
+    <div>
+      <p style="font-size:16px;font-weight:300;line-height:1.85;color:rgba(255,255,255,.7);margin-bottom:16px;">We don't post a role and then shut the door. If you're a student who wants to contribute real work — not collect a certificate — we want to hear from you year-round.</p>
+      <p style="font-size:15px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.5);">We especially welcome students building open-source tools, conducting independent research, or working on food and farming problems. Curiosity and ownership matter more than marks or titles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Workshops -->
+<section class="sec-workshops" id="workshops">
+  <div class="sec-workshops-inner">
+    <div>
+      <div class="lbl"><span class="lbl-sq"></span>Paid Programs</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);letter-spacing:.01em;color:var(--g);line-height:.9;margin-bottom:16px;">Learn to grow<br>mushrooms.</h2>
+      <p style="font-size:16px;font-weight:300;line-height:1.75;color:var(--mid);max-width:540px;">Fully hands-on cultivation programs at our Chennai farm. You will work with real substrates, real cultures, and real equipment — not demonstrations. Each program ends with a certification you earned by doing the work.</p>
+    </div>
+    <div class="workshops-grid">
+
+      <div class="wc reveal">
+        <div class="wc-badge">Paid · Hands-on · Certified</div>
+        <div class="wc-price">₹5,900</div>
+        <div class="wc-duration">5-Day Intensive Program</div>
+        <ul class="wc-list">
+          <li>Mushroom cultivation end-to-end — substrate formulation, inoculation, fruiting, and harvest</li>
+          <li>Spawn production: grain spawn and sawdust block preparation from scratch</li>
+          <li>Tissue culture: agar work, culture isolation, contamination identification and control</li>
+          <li>Fruiting chamber management — humidity, CO₂, temperature, airflow</li>
+          <li>Post-harvest handling, packaging, and basic yield tracking</li>
+        </ul>
+        <div class="wc-cert">
+          <span>Certificate of Completion</span>
+          Mushroom Cultivation &amp; Spawn Production
+        </div>
+        <a href="mailto:job@akaththi.in?subject=5-Day Workshop Enquiry" class="wc-cta">Enquire →</a>
+      </div>
+
+      <div class="wc reveal">
+        <div class="wc-badge">Paid · Hands-on · Certified</div>
+        <div class="wc-price">₹2,900</div>
+        <div class="wc-duration">3-Day Foundation Program</div>
+        <ul class="wc-list">
+          <li>Mushroom cultivation essentials — substrate preparation, inoculation, and fruiting</li>
+          <li>Hands-on block preparation and harvest technique on live farm batches</li>
+          <li>Contamination identification: what it looks like and what to do about it</li>
+          <li>Direct Q&amp;A with the farm team — varieties, troubleshooting, home setup</li>
+        </ul>
+        <div class="wc-cert">
+          <span>Certificate of Completion</span>
+          Mushroom Cultivation
+        </div>
+        <a href="mailto:job@akaththi.in?subject=3-Day Workshop Enquiry" class="wc-cta">Enquire →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="sec-bottom-cta">
+  <div class="bottom-cta-inner reveal">
+    <div class="lbl" style="justify-content:center;color:rgba(255,255,255,.4);"><span class="lbl-sq" style="background:rgba(255,255,255,.2);"></span>Apply</div>
+    <h2 class="bottom-cta-h">Ready?<br>Email us.</h2>
+    <p class="bottom-cta-p">STEP internships are open year-round. Pick the role that fits, write something honest, and send it.</p>
+    <div class="bottom-cta-email"><a href="mailto:job@akaththi.in">job@akaththi.in</a></div>
+    <div class="bottom-cta-subject">
+      <span>Subject line</span>
+      Application for [Role Name] – Your Name
+    </div>
+    <p class="bottom-cta-note">Attach your resume and a cover letter — tell us why we should pick you for that specific role.</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script>fetch('footer.html').then(r=>r.text()).then(h=>{document.getElementById('site-footer').outerHTML=h;});</script>
+<script src="jobs/_data/jobs.js"></script>
+<script>
+// ── Nav
+const navBurger=document.getElementById('navBurger');
+const navMobile=document.getElementById('navMobile');
+const navMobileClose=document.getElementById('navMobileClose');
+function closeMobileNav(){
+  navMobile.classList.remove('open');
+  navBurger.setAttribute('aria-expanded','false');
+  navMobile.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+navBurger.addEventListener('click',()=>{
+  const open=navMobile.classList.toggle('open');
+  navBurger.setAttribute('aria-expanded',String(open));
+  navMobile.setAttribute('aria-hidden',String(!open));
+  document.body.style.overflow=open?'hidden':'';
+});
+navMobileClose.addEventListener('click',closeMobileNav);
+document.querySelectorAll('.nav-mobile-link').forEach(link=>{
+  link.addEventListener('click',closeMobileNav);
+});
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav();});
+
+// ── Scroll reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── Render job cards
+function renderJobs(){
+  const grid=document.getElementById('jobs-grid');
+  const countEl=document.getElementById('jobs-count');
+  if(!grid||typeof JOBS==='undefined')return;
+  countEl.textContent=JOBS.length+' area'+(JOBS.length===1?'':'s')+' open';
+  grid.innerHTML=JOBS.map(j=>{
+    const href=j.file||('mailto:job@akaththi.in?subject='+encodeURIComponent(j.email+' \u2013 Your Name'));
+    const cta=j.file?'View &amp; Apply':'Apply by Email';
+    return `
+    <a class="jc reveal" href="${href}">
+      <div class="jc-top">
+        <div class="lbl" style="margin-bottom:0;"><span class="lbl-sq"></span>${j.departmentLabel}</div>
+        <span class="jc-badge">${j.badge}</span>
+      </div>
+      <h3 class="jc-title">${j.title}</h3>
+      <p class="jc-role">${j.role}</p>
+      <p class="jc-tagline">${j.tagline}</p>
+      <div class="jc-meta">
+        <span>${j.location}</span>
+        <span class="jc-dot"></span>
+        <span>${j.duration}</span>
+        <span class="jc-dot"></span>
+        <span>${j.compensation}</span>
+      </div>
+      <div class="jc-open">${cta}<span class="jc-open-arrow">→</span></div>
+    </a>`;
+  }).join('');
+  grid.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+renderJobs();
+</script>
+</body>
+</html>

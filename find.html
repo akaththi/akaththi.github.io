@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Find in Store — Akaththí Farms</title>
+<meta name="description" content="Find Akaththí Farms produce at premium grocers and cafes near you. Fresh oyster mushrooms and microgreens, locally grown in Tamil Nadu.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ3J83K6JX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FZ3J83K6JX');</script>
+<style>
+:root{
+  --g:#1B3F20;--g2:#2E6636;--g3:#4A7C59;--bg:#EEF2E8;--w:#FFFFFF;--ink:#0E1A0F;--mid:#5A7062;--gold:#C49A20;--rule:rgba(27,63,32,.1);
+  --fh:clamp(64px,9.5vw,140px);
+  --f2:clamp(42px,5.8vw,80px);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:999;height:64px;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:.13em;color:var(--g);text-decoration:none;}
+.nav-left,.nav-right-links{list-style:none;display:flex;gap:22px;align-items:center;margin:0;padding:0;}
+.nav-right-links{justify-content:flex-end;}
+.nav-left a,.nav-right-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
+.nav-left a:hover,.nav-right-links a:hover,.nav-left a.active,.nav-right-links a.active{color:var(--g);}
+.nav-logo-center{display:flex;align-items:center;justify-content:center;text-decoration:none;}
+.nav-logo-center img{height:44px;width:auto;transition:transform .3s ease;}
+.nav-logo-center:hover img{transform:scale(1.06);}
+.nav-left-slot{display:flex;align-items:center;gap:20px;}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
+.nav-mobile{position:fixed;inset:0;background:var(--g);z-index:1000;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;padding:48px;}
+.nav-mobile.open{opacity:1;pointer-events:auto;}
+.nav-mobile-close{position:absolute;top:20px;left:24px;background:none;border:none;cursor:pointer;width:40px;height:40px;padding:6px;display:flex;flex-direction:column;justify-content:center;gap:0;}
+.nav-mobile-close span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.7);transform-origin:center;transition:background .2s;}
+.nav-mobile-close span:nth-child(1){transform:translateY(.75px) rotate(45deg);}
+.nav-mobile-close span:nth-child(2){transform:translateY(-.75px) rotate(-45deg);}
+.nav-mobile-close:hover span{background:#fff;}
+.nav-mobile-logo{position:absolute;top:14px;left:50%;transform:translateX(-50%);opacity:.55;}
+.nav-mobile-logo img{height:36px;width:auto;filter:brightness(0) invert(1);}
+.nav-mobile-links{list-style:none;padding:0;margin:0;}
+.nav-mobile-links a{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,10vw,64px);letter-spacing:.03em;color:#fff;text-decoration:none;display:block;padding:4px 0;line-height:1.15;transition:opacity .2s;}
+.nav-mobile-links a:hover{opacity:.6;}
+.nav-mobile-sep{height:1px;background:rgba(255,255,255,.15);margin:16px 0;width:60px;}
+.nav-mobile-contact{margin-top:40px;font-size:11px;font-weight:300;letter-spacing:.08em;color:rgba(255,255,255,.4);line-height:1.8;}
+.nav-mobile-sub{list-style:none;padding:0;margin:2px 0 6px 20px;}
+.nav-mobile-sub a{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:300;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;display:block;padding:7px 0;transition:color .2s;}
+.nav-mobile-sub a:hover{color:rgba(255,255,255,.85);}
+/* ── Dropdown submenu ── */
+.nav-has-sub{position:relative;}
+.nav-sub{position:absolute;top:calc(100% + 10px);left:-16px;background:#fff;border:1px solid var(--rule);min-width:176px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease;z-index:10;}
+.nav-has-sub:hover .nav-sub,.nav-has-sub:focus-within .nav-sub{opacity:1;pointer-events:auto;transform:translateY(0);}
+.nav-sub li a{display:block;padding:10px 18px;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);white-space:nowrap;transition:color .2s;}
+.nav-sub li a:hover{color:var(--g);}
+.nav-sub li+li{border-top:1px solid var(--rule);}
+
+.btn{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:14px 28px;transition:all .22s;border:none;cursor:pointer;}
+.btn-solid{background:var(--g2);color:#fff;}.btn-solid:hover{background:var(--g);}
+.btn-ghost{background:transparent;color:var(--g2);border:1.5px solid var(--g2);}.btn-ghost:hover{background:var(--g2);color:#fff;}
+.btn-ghost-w{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.38);}.btn-ghost-w:hover{background:#fff;color:var(--g);}
+.lbl{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:18px;}
+.lbl-sq{width:9px;height:9px;background:var(--g2);flex-shrink:0;}
+
+/* FOOTER */
+footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content:space-between;align-items:flex-start;}
+.fl .logo{display:block;margin-bottom:14px;}.fl .logo img{width:160px;height:auto;display:block;}
+.fl p{font-size:12px;font-weight:300;color:rgba(255,255,255,.28);line-height:1.6;max-width:240px;}
+.flinks{display:flex;flex-direction:column;gap:10px;}
+.flinks a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.flinks a:hover{color:#fff;}
+.fc{text-align:right;}
+.fc p{font-size:13px;font-weight:300;color:rgba(255,255,255,.35);margin-bottom:6px;}
+.fc a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+.fc a:hover{color:#fff;}
+.fb{background:#000;padding:18px 52px;display:flex;justify-content:space-between;align-items:center;}
+.fb p{font-size:10px;font-weight:300;letter-spacing:.1em;color:rgba(255,255,255,.18);}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+.page-hero{padding:120px 52px 80px;margin-top:64px;}
+.page-hero-inner{max-width:1200px;margin:0 auto;}
+.page-hero-h{font-family:'Bebas Neue',sans-serif;font-size:var(--fh);line-height:.88;letter-spacing:.01em;margin-bottom:20px;}
+.page-hero-sub{font-size:18px;font-weight:300;line-height:1.7;max-width:560px;}
+@media(max-width:580px){.page-hero{padding:80px 20px 60px;}}
+
+/* ORDER DIRECT */
+.sec-order{background:var(--g);padding:100px 52px;}
+.order-inner{max-width:1200px;margin:0 auto;}
+.order-h{font-family:'Bebas Neue',sans-serif;font-size:var(--f2);color:#fff;line-height:.9;letter-spacing:.01em;margin-bottom:22px;}
+.order-p{font-size:17px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.6);max-width:560px;margin-bottom:40px;}
+.order-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:64px;}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:16px 32px;background:#25D366;color:#fff;transition:background .22s;}
+.btn-wa:hover{background:#1ebe5d;}
+.btn-wa svg{width:18px;height:18px;flex-shrink:0;}
+.btn-call{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:500;letter-spacing:.14em;text-decoration:none;padding:16px 28px;background:transparent;color:rgba(255,255,255,.65);border:1.5px solid rgba(255,255,255,.2);transition:all .22s;}
+.btn-call:hover{background:rgba(255,255,255,.07);color:#fff;border-color:rgba(255,255,255,.4);}
+.btn-call svg{width:16px;height:16px;flex-shrink:0;}
+.order-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.oc{background:rgba(255,255,255,.04);padding:32px 28px;border:1px solid rgba(255,255,255,.06);}
+.oc-n{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.06em;color:#fff;margin-bottom:10px;}
+.oc-b{font-size:13px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.45);}
+
+/* IN STORES */
+.sec-stores{background:var(--w);padding:100px 52px;}
+.stores-inner{max-width:1200px;margin:0 auto;}
+.stores-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:56px;}
+.stores-h{font-family:'Bebas Neue',sans-serif;font-size:var(--f2);color:var(--g);line-height:.9;letter-spacing:.01em;}
+.stores-sub{font-size:17px;font-weight:300;line-height:1.8;color:var(--mid);padding-bottom:24px;border-bottom:1px solid var(--rule);}
+.stores-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:32px;}
+.sc{background:var(--bg);padding:28px 24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:all .28s cubic-bezier(.22,1,.36,1);}
+.sc:hover{background:var(--g);transform:translateY(-5px);box-shadow:0 20px 48px rgba(0,0,0,.11);}
+.sc-brand{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.12em;color:var(--g);transition:color .28s;}
+.sc:hover .sc-brand{color:#fff;}
+.sc-loc{font-size:12px;font-weight:300;line-height:1.6;color:var(--mid);transition:color .28s;}
+.sc:hover .sc-loc{color:rgba(255,255,255,.6);}
+.sc-dir{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--g2);margin-top:auto;transition:color .28s;}
+.sc:hover .sc-dir{color:rgba(255,255,255,.55);}
+.sc-dir svg{width:11px;height:11px;}
+.stores-more{font-size:13px;font-weight:300;color:var(--mid);letter-spacing:.04em;}
+.stores-more em{font-style:italic;font-family:'Cormorant Garamond',serif;font-size:15px;}
+@media(max-width:980px){
+  .stores-head{grid-template-columns:1fr;gap:24px;}
+  .stores-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:580px){.stores-grid{grid-template-columns:1fr;}}
+
+/* PARTNER */
+.sec-partner{background:var(--bg);padding:100px 52px;}
+.partner-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.partner-h{font-family:'Bebas Neue',sans-serif;font-size:var(--f2);color:var(--g);line-height:.9;letter-spacing:.01em;margin-bottom:22px;}
+.partner-p{font-size:17px;font-weight:300;line-height:1.8;color:var(--mid);margin-bottom:32px;}
+.partner-contact{display:flex;flex-direction:column;gap:14px;}
+.partner-contact a{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:300;color:var(--g);text-decoration:none;transition:opacity .2s;}
+.partner-contact a:hover{opacity:.6;}
+.partner-contact svg{width:18px;height:18px;flex-shrink:0;color:var(--g2);}
+.pform{display:flex;flex-direction:column;gap:14px;}
+.pf-group{display:flex;flex-direction:column;gap:6px;}
+.pf-group label{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);}
+.pf-group input,.pf-group textarea{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:var(--ink);background:#fff;border:1.5px solid rgba(27,63,32,.12);padding:14px 16px;outline:none;transition:border-color .2s;resize:none;width:100%;}
+.pf-group input:focus,.pf-group textarea:focus{border-color:var(--g2);}
+.pf-group textarea{min-height:140px;}
+.pform-btn{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;background:var(--g2);color:#fff;border:none;padding:16px 32px;cursor:pointer;transition:background .22s;align-self:flex-start;}
+.pform-btn:hover{background:var(--g);}
+.pform-success{display:none;font-size:14px;font-weight:300;color:var(--g2);padding:14px 18px;background:rgba(46,102,54,.08);border-left:3px solid var(--g2);margin-top:4px;}
+@media(max-width:980px){
+  .order-cards{grid-template-columns:1fr;}
+  .partner-inner{grid-template-columns:1fr;gap:48px;}
+}
+
+@media(max-width:980px){
+  nav{padding:0 20px;}
+  .nav-left,.nav-right-links{display:none;}
+  .nav-burger{display:flex;}
+  .nav-mobile-logo,.nav-mobile-close{display:flex;}
+  footer{flex-direction:column;gap:36px;}.fc{text-align:left;}
+  .fb{flex-direction:column;gap:8px;text-align:center;}
+  section{padding-left:20px!important;padding-right:20px!important;}
+}
+@media(max-width:580px){.find-inner{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <div class="nav-left-slot">
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-left">
+      <li><a href="produce.html">Produce</a></li>
+      <li class="nav-has-sub">
+        <a href="farms.html">Farms</a>
+        <ul class="nav-sub">
+          <li><a href="farms.html#how-we-grow">How We Grow</a></li>
+          <li><a href="farms.html#polichalur">Polichalur Farm</a></li>
+        </ul>
+      </li>
+      <li><a href="vision.html">Vision</a></li>
+    </ul>
+  </div>
+  <a href="index.html" class="nav-logo-center" aria-label="Akaththi Farms home">
+    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
+  </a>
+  <ul class="nav-right-links">
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="company.html">Company</a></li>
+    <li><a href="join.html">Join Us</a></li>
+    <li><a href="find.html" class="active">Find Us</a></li>
+  </ul>
+</nav>
+
+<!-- Mobile Navigation Overlay -->
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">
+    <span></span><span></span>
+  </button>
+  <a href="#" class="nav-mobile-logo">
+    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
+  </a>
+  <ul class="nav-mobile-links">
+    <li><a href="produce.html" class="nav-mobile-link">Produce</a></li>
+    <li>
+      <a href="farms.html" class="nav-mobile-link">Farms</a>
+      <ul class="nav-mobile-sub">
+        <li><a href="farms.html#how-we-grow" class="nav-mobile-link">How We Grow</a></li>
+        <li><a href="farms.html#polichalur" class="nav-mobile-link">Polichalur Farm</a></li>
+      </ul>
+    </li>
+    <li><a href="vision.html" class="nav-mobile-link">Vision</a></li>
+    <li class="nav-mobile-sep"></li>
+    <li><a href="recipes.html" class="nav-mobile-link">Recipes</a></li>
+    <li><a href="company.html" class="nav-mobile-link">Company</a></li>
+    <li><a href="join.html" class="nav-mobile-link">Join Us</a></li>
+    <li><a href="find.html" class="nav-mobile-link">Find Us</a></li>
+  </ul>
+  <p class="nav-mobile-contact">connect@akaththifarms.com<br>+91 80564 02434</p>
+</div>
+
+<section class="page-hero" style="background:var(--bg);">
+  <div class="page-hero-inner">
+    <div class="lbl"><span class="lbl-sq"></span>Get in Touch</div>
+    <h1 class="page-hero-h" style="color:var(--g);">Find us.</h1>
+    <p class="page-hero-sub" style="color:var(--mid);">Order direct for same-day delivery across Chennai — or partner with us if you're a restaurant, store, or distributor.</p>
+  </div>
+</section>
+
+<!-- ══════════ ORDER DIRECT ══════════ -->
+<section class="sec-order">
+  <div class="order-inner">
+    <div class="lbl" style="color:rgba(255,255,255,.4);margin-bottom:18px;"><span class="lbl-sq" style="background:rgba(255,255,255,.18);"></span>Order Direct</div>
+    <h2 class="order-h reveal">Order fresh.<br>Delivered today.</h2>
+    <p class="order-p reveal">We harvest to order and deliver same-day across Chennai. No middlemen, no cold-chain delays. Order by 10am, delivered by evening — or reach us any time on WhatsApp.</p>
+    <div class="order-actions reveal">
+      <a href="https://wa.me/message/OGER5OPHOB7NC1" target="_blank" class="btn-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.845L0 24l6.335-1.501A11.933 11.933 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 0 1-5.003-1.374l-.36-.214-3.72.88.939-3.627-.235-.374A9.794 9.794 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+        </svg>
+        Order on WhatsApp
+      </a>
+      <a href="tel:+918056402434" class="btn-call">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/>
+        </svg>
+        +91 80564 02434
+      </a>
+    </div>
+    <div class="order-cards reveal">
+      <div class="oc">
+        <div class="oc-n">Same-Day Delivery</div>
+        <div class="oc-b">Order by 10am, delivered fresh that evening. Harvested the same morning — as close to the farm as it gets.</div>
+      </div>
+      <div class="oc">
+        <div class="oc-n">Standing Orders</div>
+        <div class="oc-b">Weekly recurring orders for households and restaurant kitchens. Consistent species, guaranteed supply, flexible quantities.</div>
+      </div>
+      <div class="oc">
+        <div class="oc-n">Retail & Stores</div>
+        <div class="oc-b">Onboarding select premium grocery stores in Chennai. Use the partner form below if you'd like to stock us.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ IN STORES ══════════ -->
+<section class="sec-stores">
+  <div class="stores-inner">
+    <div class="stores-head reveal">
+      <div>
+        <div class="lbl"><span class="lbl-sq"></span>Available Now</div>
+        <h2 class="stores-h">On shelves<br>near you.</h2>
+      </div>
+      <p class="stores-sub">Find us at these stores across Chennai. Walk in and ask for Akaththi — or pick us up alongside your usual shop.</p>
+    </div>
+    <div class="stores-grid reveal">
+      <a href="https://maps.app.goo.gl/PmAjWEDwu9PjcnBr6" target="_blank" rel="noopener" class="sc">
+        <div class="sc-brand">Amma Naana Supermarket</div>
+        <div class="sc-loc">Chennai</div>
+        <span class="sc-dir">
+          Get Directions
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 10 10 2M4 2h6v6"/>
+          </svg>
+        </span>
+      </a>
+      <a href="https://maps.app.goo.gl/UnCtkwKW7Nv461kcA" target="_blank" rel="noopener" class="sc">
+        <div class="sc-brand">JK Cheese &amp; More</div>
+        <div class="sc-loc">ECR, Injambakkam</div>
+        <span class="sc-dir">
+          Get Directions
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 10 10 2M4 2h6v6"/>
+          </svg>
+        </span>
+      </a>
+      <a href="https://maps.app.goo.gl/ocE3RDkixDBiARav9" target="_blank" rel="noopener" class="sc">
+        <div class="sc-brand">JK Cheese &amp; More</div>
+        <div class="sc-loc">Nungambakkam</div>
+        <span class="sc-dir">
+          Get Directions
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 10 10 2M4 2h6v6"/>
+          </svg>
+        </span>
+      </a>
+      <a href="https://maps.app.goo.gl/aABDCP765sA9Uqjc7" target="_blank" rel="noopener" class="sc">
+        <div class="sc-brand">JK Cheese &amp; More</div>
+        <div class="sc-loc">Anna Nagar</div>
+        <span class="sc-dir">
+          Get Directions
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 10 10 2M4 2h6v6"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <p class="stores-more reveal"><em>More stores in the pipeline</em> — we're growing our retail footprint across Chennai.</p>
+  </div>
+</section>
+
+<!-- ══════════ PARTNER WITH US ══════════ -->
+<section class="sec-partner" id="partner">
+  <div class="partner-inner">
+    <div class="reveal">
+      <div class="lbl"><span class="lbl-sq"></span>For Businesses</div>
+      <h2 class="partner-h">Partner<br>with us.</h2>
+      <p class="partner-p">Restaurants, cafes, grocery stores, distributors — we work with all of them. Drop us a message and we'll get back to you within the day, or call us directly.</p>
+      <div class="partner-contact">
+        <a href="tel:+918056402434">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/>
+          </svg>
+          +91 80564 02434
+        </a>
+        <a href="mailto:connect@akaththifarms.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          connect@akaththifarms.com
+        </a>
+      </div>
+    </div>
+    <div class="reveal">
+      <form class="pform" id="partnerForm">
+        <div class="pf-group">
+          <label for="pf-name">Your name</label>
+          <input type="text" id="pf-name" name="name" placeholder="Ravi Kumar" required>
+        </div>
+        <div class="pf-group">
+          <label for="pf-email">Email address</label>
+          <input type="email" id="pf-email" name="email" placeholder="ravi@restaurant.com" required>
+        </div>
+        <div class="pf-group">
+          <label for="pf-msg">Message</label>
+          <textarea id="pf-msg" name="message" placeholder="Tell us about your business and what you're looking for." required></textarea>
+        </div>
+        <button type="submit" class="pform-btn">Send Message →</button>
+        <div class="pform-success" id="partnerSuccess">Thanks — opening your email client now.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script>fetch('footer.html').then(r=>r.text()).then(h=>{document.getElementById('site-footer').outerHTML=h;});</script>
+
+<script>
+const navBurger=document.getElementById('navBurger');
+const navMobile=document.getElementById('navMobile');
+const navMobileClose=document.getElementById('navMobileClose');
+function closeMobileNav(){
+  navMobile.classList.remove('open');
+  navBurger.setAttribute('aria-expanded','false');
+  navMobile.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+navBurger.addEventListener('click',()=>{
+  const open=navMobile.classList.toggle('open');
+  navBurger.setAttribute('aria-expanded',String(open));
+  navMobile.setAttribute('aria-hidden',String(!open));
+  document.body.style.overflow=open?'hidden':'';
+});
+navMobileClose.addEventListener('click',closeMobileNav);
+document.querySelectorAll('.nav-mobile-link').forEach(link=>{
+  link.addEventListener('click',closeMobileNav);
+});
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav();});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+document.getElementById('partnerForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=this.name.value,email=this.email.value,msg=this.message.value;
+  const body=`From: ${name} <${email}>\n\n${msg}`;
+  window.location.href='mailto:connect@akaththifarms.com?subject='+encodeURIComponent('Partnership Enquiry')+'&body='+encodeURIComponent(body);
+  document.getElementById('partnerSuccess').style.display='block';
+});
+</script>
+</body>
+</html>

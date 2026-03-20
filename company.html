@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Company — Akaththí Farms</title>
+<meta name="description" content="The story, team, and science behind Akaththí Farms — an urban mushroom and microgreens farm in Tamil Nadu. Wild at Heart. Honestly grown.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ3J83K6JX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FZ3J83K6JX');</script>
+<style>
+:root{
+  --g:#1B3F20;--g2:#2E6636;--g3:#4A7C59;--bg:#EEF2E8;--w:#FFFFFF;--ink:#0E1A0F;--mid:#5A7062;--gold:#C49A20;--rule:rgba(27,63,32,.1);
+  --fh:clamp(64px,9.5vw,140px);
+  --f2:clamp(42px,5.8vw,80px);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:999;height:64px;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px;}
+.nav-left,.nav-right-links{list-style:none;display:flex;gap:22px;align-items:center;margin:0;padding:0;}
+.nav-right-links{justify-content:flex-end;}
+.nav-left a,.nav-right-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
+.nav-left a:hover,.nav-right-links a:hover,.nav-left a.active,.nav-right-links a.active{color:var(--g);}
+.nav-logo-center{display:flex;align-items:center;justify-content:center;text-decoration:none;}
+.nav-logo-center img{height:44px;width:auto;transition:transform .3s ease;}
+.nav-logo-center:hover img{transform:scale(1.06);}
+.nav-left-slot{display:flex;align-items:center;gap:20px;}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
+.nav-mobile{position:fixed;inset:0;background:var(--g);z-index:1000;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;padding:48px;}
+.nav-mobile.open{opacity:1;pointer-events:auto;}
+.nav-mobile-close{position:absolute;top:20px;left:24px;background:none;border:none;cursor:pointer;width:40px;height:40px;padding:6px;display:flex;flex-direction:column;justify-content:center;gap:0;}
+.nav-mobile-close span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.7);transform-origin:center;transition:background .2s;}
+.nav-mobile-close span:nth-child(1){transform:translateY(.75px) rotate(45deg);}
+.nav-mobile-close span:nth-child(2){transform:translateY(-.75px) rotate(-45deg);}
+.nav-mobile-close:hover span{background:#fff;}
+.nav-mobile-logo{position:absolute;top:14px;left:50%;transform:translateX(-50%);opacity:.55;}
+.nav-mobile-logo img{height:36px;width:auto;filter:brightness(0) invert(1);}
+.nav-mobile-links{list-style:none;padding:0;margin:0;}
+.nav-mobile-links a{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,10vw,64px);letter-spacing:.03em;color:#fff;text-decoration:none;display:block;padding:4px 0;line-height:1.15;transition:opacity .2s;}
+.nav-mobile-links a:hover{opacity:.6;}
+.nav-mobile-sep{height:1px;background:rgba(255,255,255,.15);margin:16px 0;width:60px;}
+.nav-mobile-contact{margin-top:40px;font-size:11px;font-weight:300;letter-spacing:.08em;color:rgba(255,255,255,.4);line-height:1.8;}
+.nav-mobile-sub{list-style:none;padding:0;margin:2px 0 6px 20px;}
+.nav-mobile-sub a{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:300;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;display:block;padding:7px 0;transition:color .2s;}
+.nav-mobile-sub a:hover{color:rgba(255,255,255,.85);}
+.nav-has-sub{position:relative;}
+.nav-sub{position:absolute;top:calc(100% + 10px);left:-16px;background:#fff;border:1px solid var(--rule);min-width:176px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease;z-index:10;}
+.nav-has-sub:hover .nav-sub,.nav-has-sub:focus-within .nav-sub{opacity:1;pointer-events:auto;transform:translateY(0);}
+.nav-sub li a{display:block;padding:10px 18px;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);white-space:nowrap;transition:color .2s;}
+.nav-sub li a:hover{color:var(--g);}
+.nav-sub li+li{border-top:1px solid var(--rule);}
+
+.btn{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:14px 28px;transition:all .22s;border:none;cursor:pointer;}
+.btn-ghost{background:transparent;color:var(--g2);border:1.5px solid var(--g2);}.btn-ghost:hover{background:var(--g2);color:#fff;}
+.lbl{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:18px;}
+.lbl-sq{width:9px;height:9px;background:var(--g2);flex-shrink:0;}
+
+/* ── PAGE HERO */
+.page-hero{padding:120px 52px 80px;margin-top:64px;background:var(--bg);}
+.page-hero-inner{max-width:1200px;margin:0 auto;}
+.page-hero-h{font-family:'Bebas Neue',sans-serif;font-size:var(--fh);color:var(--g);line-height:.88;letter-spacing:.01em;margin-bottom:20px;}
+.page-hero-sub{font-size:18px;font-weight:300;line-height:1.7;color:var(--mid);max-width:560px;}
+
+/* ── OUR STORY */
+.sec-story{background:var(--w);padding:100px 52px;}
+.story-inner{max-width:760px;margin:0 auto;}
+.story-h{font-family:'Bebas Neue',sans-serif;font-size:var(--f2);color:var(--g);line-height:.9;letter-spacing:.01em;margin-bottom:32px;}
+.story-p{font-size:17px;font-weight:300;line-height:1.88;color:var(--mid);margin-bottom:22px;}
+.story-pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(22px,3vw,30px);color:var(--g);line-height:1.45;margin:44px 0;padding-left:28px;border-left:3px solid var(--g2);}
+.story-sig{font-size:14px;font-weight:400;color:var(--mid);margin-top:36px;padding-top:24px;border-top:1px solid var(--rule);font-style:italic;}
+
+/* ── SCIENCE / CREDENTIALS */
+.sec-credentials{background:var(--bg);padding:100px 52px;}
+.cred-inner{max-width:1200px;margin:0 auto;}
+.cred-h{font-family:'Bebas Neue',sans-serif;font-size:var(--f2);color:var(--g);line-height:.9;letter-spacing:.01em;margin-bottom:44px;}
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.cred-card{background:var(--w);padding:30px 32px;border-left:3px solid transparent;transition:all .28s;display:flex;flex-direction:column;gap:10px;}
+.cred-card:hover{border-left-color:var(--g2);box-shadow:0 4px 24px rgba(0,0,0,.06);}
+.cred-card-t{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.03em;color:var(--g);line-height:1.1;}
+.cred-card-t a{color:var(--g);text-decoration:none;border-bottom:1px solid rgba(27,63,32,.22);padding-bottom:1px;transition:border-color .2s;}
+.cred-card-t a:hover{border-bottom-color:var(--g);}
+.cred-card-b{font-size:13px;font-weight:300;line-height:1.68;color:var(--mid);}
+.cred-card-mentor{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px;}
+.cred-card-mentor-lbl{font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);opacity:.6;}
+.cred-card-mentor a{font-size:11px;font-weight:500;color:var(--g2);text-decoration:none;border-bottom:1px solid rgba(46,102,54,.2);padding-bottom:1px;transition:border-color .2s;}
+.cred-card-mentor a:hover{border-bottom-color:var(--g2);}
+
+/* ── TEAM */
+.sec-team{background:var(--g);padding:100px 52px;}
+.team-inner{max-width:1200px;margin:0 auto;}
+.team-h{font-family:'Bebas Neue',sans-serif;font-size:var(--f2);color:#fff;line-height:.9;letter-spacing:.01em;margin-bottom:48px;}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+.team-card{background:rgba(255,255,255,.05);padding:32px 28px;border-top:2px solid transparent;transition:border-color .25s,background .25s;}
+.team-card:hover{border-top-color:var(--g3);background:rgba(255,255,255,.08);}
+.team-avatar{width:48px;height:48px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.05em;color:rgba(255,255,255,.32);}
+.team-name{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.03em;color:#fff;line-height:1.1;margin-bottom:5px;}
+.team-role{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--g3);margin-bottom:12px;}
+.team-bio{font-size:13px;font-weight:300;line-height:1.68;color:rgba(255,255,255,.44);}
+
+/* ── NEWS */
+.sec-news{background:var(--bg);padding:100px 52px;}
+.news-inner{max-width:1200px;margin:0 auto;}
+.news-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;}
+.news-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5.6vw,72px);color:var(--g);line-height:.9;}
+.news-all{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(27,63,32,.4);text-decoration:none;border-bottom:1px solid rgba(27,63,32,.18);
+  padding-bottom:2px;transition:color .2s;white-space:nowrap;}
+.news-all:hover{color:var(--g);}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.nc{background:var(--w);padding:32px 30px 36px;display:flex;flex-direction:column;
+  border-top:2px solid transparent;transition:border-color .25s;text-decoration:none;}
+.nc:hover{border-top-color:var(--g);}
+.nc-meta{display:flex;gap:10px;align-items:center;margin-bottom:14px;}
+.nc-tag{font-size:8px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--g2);background:rgba(46,102,54,.08);padding:3px 8px;}
+.nc-date{font-size:10px;font-weight:300;color:var(--mid);opacity:.5;}
+.nc-title{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.02em;
+  color:var(--g);line-height:1.1;margin-bottom:12px;flex:1;}
+.nc-body{font-size:13px;font-weight:300;line-height:1.72;color:var(--mid);}
+.nc-link{margin-top:18px;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--g2);border-bottom:1px solid rgba(46,102,54,.2);padding-bottom:2px;
+  align-self:flex-start;transition:opacity .2s;}
+.nc:hover .nc-link{opacity:.6;}
+
+/* ── INSTAGRAM */
+.sec-insta{background:var(--w);padding:100px 52px;}
+.insta-inner{max-width:1200px;margin:0 auto;}
+.insta-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;}
+.insta-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5.6vw,72px);color:var(--g);line-height:.9;}
+.insta-handle{font-size:10px;font-weight:500;letter-spacing:.18em;color:var(--mid);
+  text-decoration:none;transition:color .2s;}
+.insta-handle:hover{color:var(--g);}
+.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;}
+.ig-tile{display:block;aspect-ratio:1;position:relative;overflow:hidden;cursor:pointer;text-decoration:none;color:inherit;}
+.ig-bg{width:100%;height:100%;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.ig-tile:hover .ig-bg{transform:scale(1.06);}
+.ig-over{position:absolute;inset:0;background:rgba(14,26,15,.7);opacity:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;transition:opacity .28s;}
+.ig-tile:hover .ig-over{opacity:1;}
+.ig-tag{font-size:9px;font-weight:500;letter-spacing:.16em;color:rgba(255,255,255,.7);text-transform:uppercase;}
+.ig-heart{font-size:18px;color:#fff;}
+.ig-follow-tile{background:var(--g);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:20px;aspect-ratio:1;text-align:center;}
+.ig-follow-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
+  font-size:13px;line-height:1.5;color:rgba(255,255,255,.55);margin-bottom:14px;}
+.ig-follow-btn{font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--g3);border-bottom:1px solid rgba(74,124,89,.25);
+  padding-bottom:2px;text-decoration:none;transition:opacity .2s;}
+.ig-follow-btn:hover{opacity:.7;}
+
+/* FOOTER */
+footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content:space-between;align-items:flex-start;}
+.fl .logo{display:block;margin-bottom:14px;}.fl .logo img{width:160px;height:auto;display:block;}
+.fl p{font-size:12px;font-weight:300;color:rgba(255,255,255,.28);line-height:1.6;max-width:240px;}
+.flinks{display:flex;flex-direction:column;gap:10px;}
+.flinks a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.flinks a:hover{color:#fff;}
+.fc{text-align:right;}
+.fc p{font-size:13px;font-weight:300;color:rgba(255,255,255,.35);margin-bottom:6px;}
+.fc a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+.fc a:hover{color:#fff;}
+.fb{background:#000;padding:18px 52px;display:flex;justify-content:space-between;align-items:center;}
+.fb p{font-size:10px;font-weight:300;letter-spacing:.1em;color:rgba(255,255,255,.18);}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+@media(max-width:980px){
+  nav{padding:0 20px;}
+  .nav-left,.nav-right-links{display:none;}
+  .nav-burger{display:flex;}
+  .news-grid,.insta-grid{grid-template-columns:repeat(2,1fr);}
+  .news-hdr,.insta-hdr{flex-direction:column;gap:10px;align-items:flex-start;}
+  .cred-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:repeat(2,1fr);}
+  footer{flex-direction:column;gap:36px;}.fc{text-align:left;}
+  .fb{flex-direction:column;gap:8px;text-align:center;}
+  section{padding-left:20px!important;padding-right:20px!important;}
+}
+@media(max-width:580px){
+  .page-hero{padding:80px 20px 60px;}
+  .news-grid,.insta-grid{grid-template-columns:1fr!important;}
+  .team-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <div class="nav-left-slot">
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-left">
+      <li><a href="produce.html">Produce</a></li>
+      <li class="nav-has-sub">
+        <a href="farms.html">Farms</a>
+        <ul class="nav-sub">
+          <li><a href="farms.html#how-we-grow">How We Grow</a></li>
+          <li><a href="farms.html#polichalur">Polichalur Farm</a></li>
+        </ul>
+      </li>
+      <li><a href="vision.html">Vision</a></li>
+    </ul>
+  </div>
+  <a href="index.html" class="nav-logo-center" aria-label="Akaththi Farms home">
+    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
+  </a>
+  <ul class="nav-right-links">
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="company.html" class="active">Company</a></li>
+    <li><a href="join.html">Join Us</a></li>
+    <li><a href="find.html">Find Us</a></li>
+  </ul>
+</nav>
+
+<!-- Mobile Navigation Overlay -->
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">
+    <span></span><span></span>
+  </button>
+  <a href="#" class="nav-mobile-logo">
+    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
+  </a>
+  <ul class="nav-mobile-links">
+    <li><a href="produce.html" class="nav-mobile-link">Produce</a></li>
+    <li>
+      <a href="farms.html" class="nav-mobile-link">Farms</a>
+      <ul class="nav-mobile-sub">
+        <li><a href="farms.html#how-we-grow" class="nav-mobile-link">How We Grow</a></li>
+        <li><a href="farms.html#polichalur" class="nav-mobile-link">Polichalur Farm</a></li>
+      </ul>
+    </li>
+    <li><a href="vision.html" class="nav-mobile-link">Vision</a></li>
+    <li class="nav-mobile-sep"></li>
+    <li><a href="recipes.html" class="nav-mobile-link">Recipes</a></li>
+    <li><a href="company.html" class="nav-mobile-link">Company</a></li>
+    <li><a href="join.html" class="nav-mobile-link">Join Us</a></li>
+    <li><a href="find.html" class="nav-mobile-link">Find Us</a></li>
+  </ul>
+  <p class="nav-mobile-contact">connect@akaththifarms.com<br>+91 80564 02434</p>
+</div>
+
+<!-- § PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="lbl"><span class="lbl-sq"></span>Company</div>
+    <h1 class="page-hero-h">About<br>Akaththí.</h1>
+    <p class="page-hero-sub">Wild at Heart. Born from a love for mushrooms — and a childhood curry that tasted like the earth itself.</p>
+  </div>
+</section>
+
+<!-- § OUR STORY -->
+<section class="sec-story">
+  <div class="story-inner">
+    <div class="reveal">
+      <div class="lbl"><span class="lbl-sq"></span>Our Story</div>
+      <h2 class="story-h">Ammavin<br>Malaikaalan<br>Kulambu.</h2>
+      <p class="story-p">My love for mushrooms began in childhood. After every rainfall, my Amma would forage wild mushrooms from the fields and turn them into her special dish — Malaikaalan Kulambu. The taste of that curry, earthy and full of life, stayed with me forever.</p>
+      <p class="story-pull">"Those flavours were more than food. They were memories of nature, of family, of something pure."</p>
+      <p class="story-p">Years later, when curiosity turned into a deeper passion, I knew I wanted to bring that same freshness and magic of mushrooms into people's lives.</p>
+      <p class="story-p">That passion became the seed of Akaththi Farms. Built on curiosity, care, and respect for nature, it is where tradition meets science. We recreate the natural environments mushrooms love — using sustainable micro-farm systems to cultivate exotic varieties like Pink Oyster, Golden Oyster, Elm Oyster, Lion's Mane, Shimeji, Enoki, Shiitake, Pioppino, and many more.</p>
+      <p class="story-p">Akaththi Farms was born not from business plans, but from a love for mushrooms — their flavour, their beauty, and their promise for the future of food. Every harvest we bring to your table carries that same spirit. Fresh and Wild at Heart.</p>
+      <p class="story-sig">— Thirumalaivasan Rajasekaran, Founder</p>
+    </div>
+  </div>
+</section>
+
+<!-- § SCIENCE-FIRST / FARMER-LED -->
+<section class="sec-credentials">
+  <div class="cred-inner">
+    <div class="reveal">
+      <div class="lbl"><span class="lbl-sq"></span>Science-first / Farmer-led</div>
+      <h2 class="cred-h">Built on science.<br>Grown with honesty.</h2>
+    </div>
+    <div class="cred-grid reveal">
+
+      <div class="cred-card">
+        <div class="cred-card-t"><a href="https://www.ciic.ventures/" target="_blank" rel="noopener">Crescent CIIC</a> Incubatee</div>
+        <div class="cred-card-b">Selected for the Crescent Innovation &amp; Incubation Council programme at Vandalur — giving us infrastructure, mentorship, and a peer network in deep-tech agriculture.</div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-card-t">IIHR Partnership</div>
+        <div class="cred-card-b">Our spawn sourcing and substrate formulation protocols are developed in collaboration with IIHR (Indian Institute of Horticultural Research), ensuring scientific rigour at the foundation.</div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-card-t">Tamil Nadu Roots</div>
+        <div class="cred-card-b">Salem-registered, Polichalur-based. Our supply chain is hyperlocal — we grow for Chennai kitchens, deliver same-day, and trace every mushroom back to its batch.</div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-card-t">Built to go Global</div>
+        <div class="cred-card-b">Our model is designed to scale beyond India. POD infrastructure is leased — not franchised. Sales expansion is in pipeline, bringing the same quality and traceability to urban centres worldwide.</div>
+      </div>
+
+    </div>
+    <div class="reveal" style="margin-top:44px;">
+      <a href="find.html#partner" class="btn btn-ghost">Partner with us →</a>
+    </div>
+  </div>
+</section>
+
+<!-- § TEAM -->
+<section class="sec-team">
+  <div class="team-inner">
+    <div class="reveal">
+      <div class="lbl" style="color:rgba(255,255,255,.35);"><span class="lbl-sq" style="background:var(--g3);"></span>The Team</div>
+      <h2 class="team-h">The people<br>behind it.</h2>
+    </div>
+    <div class="team-grid reveal">
+
+      <div class="team-card">
+        <div class="team-avatar">TR</div>
+        <div class="team-name">Thirumalaivasan Rajasekaran</div>
+        <div class="team-role">Co-Founder</div>
+        <div class="team-bio">The vision behind Akaththi. Mycologist, systems thinker, and the one who grew up eating Malaikaalan Kulambu.</div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">VP</div>
+        <div class="team-name">Valarmathi Ponnusamy</div>
+        <div class="team-role">Co-Founder</div>
+        <div class="team-bio">Grounds the operations. Makes sure the farm runs as well as it grows.</div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">DE</div>
+        <div class="team-name">Dharanish Evan Sunil Kumar</div>
+        <div class="team-role">Cultivation Associate</div>
+        <div class="team-bio">Runs the grow rooms. Species selection, substrate formulation, and harvesting in sequence.</div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">SS</div>
+        <div class="team-name">Sanjay Sathyamoorthy</div>
+        <div class="team-role">Associate Electronics Engineer</div>
+        <div class="team-bio">Builds the electronics layer — sensors, controls, and the infrastructure behind KAANI.</div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">KA</div>
+        <div class="team-name">Dr. K. Arunodhayam</div>
+        <div class="team-role">Mycology Mentor · <a href="https://www.linkedin.com/in/arunodhayam-kalleti-192118241/" target="_blank" rel="noopener" style="color:var(--g3);text-decoration:none;border-bottom:1px solid rgba(74,124,89,.3);padding-bottom:1px;">LinkedIn ↗</a></div>
+        <div class="team-bio">Faculty at Dr. YSR Horticulture University. Guides our mycology research and cultivation science.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- § NEWS & UPDATES -->
+<section class="sec-news" id="journal">
+  <div class="news-inner">
+    <div class="news-hdr reveal">
+      <div>
+        <div class="lbl"><span class="lbl-sq"></span>From the Farm</div>
+        <h2 class="news-h">News &amp;<br>Updates.</h2>
+      </div>
+      <a href="news/index.html" class="news-all">All Updates →</a>
+    </div>
+    <div class="news-grid reveal" id="newsGrid"></div>
+  </div>
+</section>
+
+<!-- § FROM THE FARM FLOOR — INSTAGRAM -->
+<section class="sec-insta">
+  <div class="insta-inner">
+    <div class="insta-hdr reveal">
+      <div>
+        <div class="lbl"><span class="lbl-sq"></span>Instagram</div>
+        <h2 class="insta-h">From the<br>farm floor.</h2>
+      </div>
+      <a href="https://www.instagram.com/akaththifarms" target="_blank" rel="noopener" class="insta-handle">@akaththifarms ↗</a>
+    </div>
+    <div class="insta-grid reveal">
+
+      <!-- Update each href with the real Instagram post URL -->
+      <a href="https://www.instagram.com/akaththifarms/" target="_blank" rel="noopener" class="ig-tile">
+        <div class="ig-bg" style="background:linear-gradient(135deg,#D49C0A,#5A3A02);display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 120 120" width="80" opacity=".18"><path d="M10 60C16 34 40 10 65 4c10-3 20-3 28 1 12 6 16 22 14 36-2 14-13 23-27 26-15 3-31-1-42-10-12-8-18-2-13-9 l0 0z" fill="#fff"/></svg>
+        </div>
+        <div class="ig-over"><span class="ig-heart">♥</span><span class="ig-tag">#GoldenOyster</span></div>
+      </a>
+
+      <a href="https://www.instagram.com/akaththifarms/" target="_blank" rel="noopener" class="ig-tile">
+        <div class="ig-bg" style="background:linear-gradient(135deg,#2a2a2a,#1a1a1a);display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 120 120" width="80" opacity=".15"><rect x="30" y="20" width="60" height="80" rx="6" fill="#fff"/><rect x="42" y="36" width="36" height="4" rx="2" fill="#2a2a2a"/><rect x="42" y="46" width="28" height="3" rx="1" fill="#2a2a2a"/><rect x="42" y="55" width="32" height="3" rx="1" fill="#2a2a2a"/></svg>
+        </div>
+        <div class="ig-over"><span class="ig-heart">♥</span><span class="ig-tag">#KAANIIntelligence</span></div>
+      </a>
+
+      <a href="https://www.instagram.com/akaththifarms/" target="_blank" rel="noopener" class="ig-tile">
+        <div class="ig-bg" style="background:linear-gradient(135deg,#B04428,#641808);display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 120 120" width="80" opacity=".18"><path d="M12 62C18 36 42 12 67 6c10-3 20-3 28 1 12 6 16 22 14 36-2 14-13 23-27 26-15 3-31-1-42-10-12-8-18-2-13-9 l0 0z" fill="#fff"/></svg>
+        </div>
+        <div class="ig-over"><span class="ig-heart">♥</span><span class="ig-tag">#PinkOyster</span></div>
+      </a>
+
+      <a href="https://www.instagram.com/akaththifarms/" target="_blank" rel="noopener" class="ig-tile">
+        <div class="ig-bg" style="background:linear-gradient(135deg,#C2B898,#5E5645);display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 120 120" width="80" opacity=".2"><path d="M14 64C20 38 44 14 69 8c10-3 20-3 28 1 12 6 16 22 14 36-2 14-13 23-27 26-15 3-31-1-42-10-12-8-18-2-13-9 l0 0z" fill="#fff"/></svg>
+        </div>
+        <div class="ig-over"><span class="ig-heart">♥</span><span class="ig-tag">#ElmOyster</span></div>
+      </a>
+
+      <a href="https://www.instagram.com/akaththifarms/" target="_blank" rel="noopener" class="ig-tile">
+        <div class="ig-bg" style="background:linear-gradient(135deg,#444,#111);display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 120 120" width="80" opacity=".16"><path d="M16 62C22 34 46 10 70 4c10-3 20-3 28 1 12 6 16 22 14 36-2 14-13 23-27 26-15 3-31-1-42-10-12-8-18-2-14-9 l0 0z" fill="#fff"/></svg>
+        </div>
+        <div class="ig-over"><span class="ig-heart">♥</span><span class="ig-tag">#GreyOyster</span></div>
+      </a>
+
+      <div class="ig-tile ig-follow-tile">
+        <p class="ig-follow-quote">"Grown honestly.<br>Delivered fresh."</p>
+        <a href="https://www.instagram.com/akaththifarms" target="_blank" rel="noopener" class="ig-follow-btn">Follow on Instagram ↗</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script>fetch('footer.html').then(r=>r.text()).then(h=>{document.getElementById('site-footer').outerHTML=h;});</script>
+
+<!-- News registry — defines global NEWS -->
+<script src="news/_data/news.js"></script>
+
+<script>
+// Render news cards dynamically from NEWS registry
+(function(){
+  var grid = document.getElementById('newsGrid');
+  if(!grid || typeof NEWS === 'undefined') return;
+  NEWS.slice(0,3).forEach(function(n){
+    var a = document.createElement('a');
+    a.href = 'news/article.html?slug=' + n.slug;
+    a.className = 'nc';
+    a.innerHTML =
+      '<div class="nc-meta"><span class="nc-tag">'+n.tag+'</span><span class="nc-date">'+n.date+'</span></div>'+
+      '<div class="nc-title">'+n.title+'</div>'+
+      '<p class="nc-body">'+n.excerpt+'</p>'+
+      '<div class="nc-link">Read more →</div>';
+    grid.appendChild(a);
+  });
+})();
+</script>
+
+<script>
+const navBurger=document.getElementById('navBurger');
+const navMobile=document.getElementById('navMobile');
+const navMobileClose=document.getElementById('navMobileClose');
+function closeMobileNav(){
+  navMobile.classList.remove('open');
+  navBurger.setAttribute('aria-expanded','false');
+  navMobile.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+navBurger.addEventListener('click',()=>{
+  const open=navMobile.classList.toggle('open');
+  navBurger.setAttribute('aria-expanded',String(open));
+  navMobile.setAttribute('aria-hidden',String(!open));
+  document.body.style.overflow=open?'hidden':'';
+});
+navMobileClose.addEventListener('click',closeMobileNav);
+document.querySelectorAll('.nav-mobile-link').forEach(link=>{link.addEventListener('click',closeMobileNav);});
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav();});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
