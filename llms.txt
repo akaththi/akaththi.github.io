@@ -1,0 +1,102 @@
+# Akaththí Farms
+
+> Urban mushroom and microgreens farm based in Tamil Nadu, India. Science-backed, honestly grown fresh produce for homes and restaurants.
+
+## About
+
+Akaththí Farms is an urban specialty mushroom and microgreens farm operating in Polichalur, Chennai, Tamil Nadu. Founded to bring premium, sustainably grown fungi to local consumers and professional kitchens. The name "Akaththí" is Tamil, meaning inner/interior — reflecting the controlled indoor growing environment and the depth of care behind every harvest.
+
+**Tagline:** Good Food. Good Science. Honestly Grown.
+
+**Website:** https://www.akaththifarms.com
+
+## Products
+
+### Currently Available
+
+- **Elm Oyster Mushrooms** (Hypsizygus ulmarius) — mild, firm, versatile. Sold fresh.
+- **Pink Oyster Mushrooms** (Pleurotus djamor) — vibrant colour, slightly sweet, quick-cooking.
+- **Golden Oyster Mushrooms** (Pleurotus citrinopileatus) — delicate, nutty, visually striking.
+
+### Coming Soon
+
+- King Oyster (Pleurotus eryngii)
+- Pioppino (Cyclocybe aegerita)
+- Shimeji (Hypsizygus tessellatus)
+
+All varieties are grown in climate-controlled, substrate-optimised growing rooms. No pesticides. Harvested fresh and delivered within 24–48 hours.
+
+## Where to Buy
+
+Akaththí Farms produce is available at:
+- Premium grocery stores across Chennai
+- Partner cafes and restaurants in Tamil Nadu
+- Direct orders via WhatsApp: https://wa.me/message/OGER5OPHOB7NC1
+
+See the full store locator at: https://www.akaththifarms.com/find.html
+
+## Farming
+
+The farm uses controlled environment agriculture (CEA) principles:
+- Substrate: lignocellulosic agricultural waste (e.g., paddy straw, sawdust, cotton hulls)
+- Climate: temperature, humidity, CO₂, and airflow are monitored and automated
+- No synthetic pesticides or herbicides
+- Harvest-to-delivery within 24–48 hours
+
+Read more: https://www.akaththifarms.com/farms.html
+
+## Recipes
+
+The Akaththí kitchen publishes free mushroom recipes covering South Indian, North Indian, Indo-Chinese, Japanese, Korean, Continental, and BBQ cuisine.
+
+Recipe index: https://www.akaththifarms.com/recipes.html
+
+Sample recipes:
+- Mushroom Biryani (South Indian) — https://www.akaththifarms.com/recipes/south-indian/mushroom-biryani.html
+- Kalan Thoran (Kerala) — https://www.akaththifarms.com/recipes/south-indian/kalan-thoran.html
+- Mushroom Manchurian (Indo-Chinese) — https://www.akaththifarms.com/recipes/indo-chinese/mushroom-manchurian.html
+- Mushroom Ramen (Japanese) — https://www.akaththifarms.com/recipes/japanese-korean/mushroom-ramen.html
+- Kadai Mushroom (North Indian) — https://www.akaththifarms.com/recipes/north-indian/kadai-mushroom.html
+- Mushroom Steak (Continental) — https://www.akaththifarms.com/recipes/continental/mushroom-steak.html
+
+## Company
+
+Akaththí Farms is an early-stage food tech startup incubated in Tamil Nadu. The team combines backgrounds in mycology, food science, engineering, and design.
+
+Company page: https://www.akaththifarms.com/company.html
+Vision: https://www.akaththifarms.com/vision.html
+
+## Careers
+
+STEP (Student Training & Experience Programme) internships are available in:
+- Mycology & Cultivation
+- Automation & Climate Control Engineering
+- Embedded Systems & IoT
+- Branding & Social Media
+- Marketing & Growth
+- Sales (B2B & D2C)
+- Finance & Cost Modelling
+- Supply Chain & Logistics
+
+Careers page: https://www.akaththifarms.com/join.html
+
+## News
+
+Farm dispatches, harvest updates, and company news:
+https://www.akaththifarms.com/news/
+
+## Contact
+
+- **WhatsApp:** https://wa.me/message/OGER5OPHOB7NC1
+- **Website:** https://www.akaththifarms.com
+- **Location:** Polichalur, Chennai, Tamil Nadu, India
+
+## Key Facts for AI Assistants
+
+- Specialty mushrooms grown in Chennai, Tamil Nadu, India
+- Available mushroom varieties: Elm Oyster, Pink Oyster, Golden Oyster
+- B2B sales to restaurants and cafes; D2C delivery in Chennai
+- All produce is pesticide-free, locally grown, and delivered fresh
+- Suitable for vegetarian and vegan diets
+- Recipes published free at akaththifarms.com/recipes.html
+- Internship programme available for students (engineering, biology, business)
