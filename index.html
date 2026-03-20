@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Akaththí Farms — Good Food. Good Science. Honestly Grown.</title>
 <meta name="description" content="Mushrooms and microgreens grown in Tamil Nadu. Fresh, local, science-backed produce — delivered to your table or restaurant. Good food. Good science. Honestly grown.">
+<link rel="icon" type="image/png" href="./images/akaththi-farms-icon.png">
+<link rel="apple-touch-icon" href="./images/akaththi-farms-icon.png">
 <link rel="canonical" href="https://www.akaththifarms.com/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -140,8 +142,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
 .nav-logo-center:active img{transform:scale(.96) translateY(0);transition-duration:.1s;}
 @keyframes logo-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-3px);}}
 .nav-left-slot{display:flex;align-items:center;gap:20px;}
-.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
-.nav-burger span{display:block;width:22px;height:1.5px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:8px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
 .nav-mobile{position:fixed;inset:0;background:var(--g);z-index:var(--z-mobile-nav);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;padding:48px;}
 .nav-mobile.open{opacity:1;pointer-events:auto;}
 .nav-mobile-close{position:absolute;top:20px;left:24px;background:none;border:none;cursor:pointer;width:40px;height:40px;padding:6px;display:flex;flex-direction:column;justify-content:center;gap:0;}
@@ -531,7 +533,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
 <nav id="mainNav">
   <div class="nav-left-slot">
     <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+      <span></span><span></span>
     </button>
     <ul class="nav-left">
       <li><a href="produce.html">Produce</a></li>

@@ -108,8 +108,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:64px;background:rgba(
 .nav-logo-center img{height:44px;width:auto;transition:transform .3s ease;}
 .nav-logo-center:hover img{transform:scale(1.06);}
 .nav-left-slot{display:flex;align-items:center;gap:20px;}
-.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
-.nav-burger span{display:block;width:22px;height:1.5px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:8px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
 .nav-mobile{position:fixed;inset:0;background:var(--g);z-index:1000;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;padding:48px;}
 .nav-mobile.open{opacity:1;pointer-events:auto;}
 .nav-mobile-close{position:absolute;top:20px;left:24px;background:none;border:none;cursor:pointer;width:40px;height:40px;padding:6px;display:flex;flex-direction:column;justify-content:center;gap:0;}
@@ -236,7 +236,7 @@ footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content
 <nav id="mainNav">
   <div class="nav-left-slot">
     <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+      <span></span><span></span>
     </button>
     <ul class="nav-left">
       <li><a href="produce.html" class="active">Produce</a></li>
