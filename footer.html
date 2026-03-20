@@ -8,7 +8,7 @@ footer .f-reg p{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:300;
 /* Brand column */
 footer .fl{display:flex;flex-direction:column;}
 footer .fl .logo{display:block;margin-bottom:18px;}
-footer .fl .logo img{height:52px;width:auto;display:block;max-width:100%;}
+footer .fl .logo img{height:52px;width:auto;display:block;max-width:100%;-webkit-user-drag:none;user-select:none;pointer-events:none;}
 footer .fl-tag{font-family:'Bebas Neue',sans-serif;font-size:28px;font-weight:400;letter-spacing:.12em;color:rgba(255,255,255,.55);line-height:1;margin:0 0 8px;}
 footer .fl-sub{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin:0 0 24px;}
 /* Social icons */
@@ -103,4 +103,7 @@ footer .fc-wa svg{flex-shrink:0;}
   <p>&copy; <span id="f-year"></span> Akaththí Farms Private Limited</p>
   <p>FSSAI Lic. 12425008003922</p>
 </div>
-<script>document.getElementById('f-year').textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById('f-year').textContent=new Date().getFullYear();
+(function(){var img=document.querySelector('footer .fl .logo img');if(img){img.addEventListener('contextmenu',function(e){e.preventDefault();});img.addEventListener('dragstart',function(e){e.preventDefault();});}})();
+</script>

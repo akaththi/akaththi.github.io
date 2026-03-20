@@ -493,6 +493,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
   .sec-intro,.sec-grow,.sec-var,.sec-kaani,.sec-cta,.sec-pq{padding-top:72px;padding-bottom:72px;}
   .intro-aside .chapter{display:none;}
 }
+/* ── Brand image protection ── */
+.nav-logo-center img,.hero-logo-mark img,.hero-img img,.vc-svg img{
+  -webkit-user-drag:none;user-select:none;pointer-events:none;}
+.vc-img{position:relative;}
+.vc-img::after{content:'';position:absolute;inset:0;z-index:1;}
 @media(max-width:580px){.var-grid,.var-grid-3{grid-template-columns:1fr;}}
 
 @media(max-width:580px){.recipes-grid,.news-grid,.insta-grid{grid-template-columns:1fr!important;}}
@@ -1167,6 +1172,15 @@ document.querySelectorAll('.nav-mobile-link').forEach(link => {
   link.addEventListener('click', closeMobileNav);
 });
 
+})();
+</script>
+<script>
+(function(){
+  var sel='.nav-logo-center img,.hero-logo-mark img,.hero-img img,.vc-svg img';
+  document.querySelectorAll(sel).forEach(function(img){
+    img.addEventListener('contextmenu',function(e){e.preventDefault();});
+    img.addEventListener('dragstart',function(e){e.preventDefault();});
+  });
 })();
 </script>
 </body>
