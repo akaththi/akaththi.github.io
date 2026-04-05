@@ -37,69 +37,10 @@
   "inLanguage": "en-IN"
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ3J83K6JX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FZ3J83K6JX');</script>
+<link rel="stylesheet" href="/styles.css">
 <style>
-:root{
-  --g:#1B3F20;--g2:#2E6636;--g3:#4A7C59;--bg:#EEF2E8;--w:#FFFFFF;--ink:#0E1A0F;--mid:#5A7062;--gold:#C49A20;--rule:rgba(27,63,32,.1);
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden;}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:999;height:64px;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px;}
-.nav-left,.nav-right-links{list-style:none;display:flex;gap:22px;align-items:center;margin:0;padding:0;}
-.nav-right-links{justify-content:flex-end;}
-.nav-left a,.nav-right-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
-.nav-left a:hover,.nav-right-links a:hover,.nav-left a.active,.nav-right-links a.active{color:var(--g);}
-.nav-logo-center{display:flex;align-items:center;justify-content:center;text-decoration:none;}
-.nav-logo-center img{height:44px;width:auto;transition:transform .3s ease;}
-.nav-logo-center:hover img{transform:scale(1.06);}
-.nav-left-slot{display:flex;align-items:center;gap:20px;}
-.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
-.nav-burger span{display:block;width:22px;height:1.5px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
-.nav-mobile{position:fixed;inset:0;background:var(--g);z-index:1000;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;padding:48px;}
-.nav-mobile.open{opacity:1;pointer-events:auto;}
-.nav-mobile-close{position:absolute;top:20px;left:24px;background:none;border:none;cursor:pointer;width:40px;height:40px;padding:6px;display:flex;flex-direction:column;justify-content:center;gap:0;}
-.nav-mobile-close span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.7);transform-origin:center;transition:background .2s;}
-.nav-mobile-close span:nth-child(1){transform:translateY(.75px) rotate(45deg);}
-.nav-mobile-close span:nth-child(2){transform:translateY(-.75px) rotate(-45deg);}
-.nav-mobile-close:hover span{background:#fff;}
-.nav-mobile-logo{position:absolute;top:14px;left:50%;transform:translateX(-50%);opacity:.55;}
-.nav-mobile-logo img{height:36px;width:auto;filter:brightness(0) invert(1);}
-.nav-mobile-links{list-style:none;padding:0;margin:0;}
-.nav-mobile-links a{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,10vw,64px);letter-spacing:.03em;color:#fff;text-decoration:none;display:block;padding:4px 0;line-height:1.15;transition:opacity .2s;}
-.nav-mobile-links a:hover{opacity:.6;}
-.nav-mobile-sep{height:1px;background:rgba(255,255,255,.15);margin:16px 0;width:60px;}
-.nav-mobile-contact{margin-top:40px;font-size:11px;font-weight:300;letter-spacing:.08em;color:rgba(255,255,255,.4);line-height:1.8;}
-.nav-mobile-sub{list-style:none;padding:0;margin:2px 0 6px 20px;}
-.nav-mobile-sub a{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:300;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;display:block;padding:7px 0;transition:color .2s;}
-.nav-mobile-sub a:hover{color:rgba(255,255,255,.85);}
-.nav-has-sub{position:relative;}
-.nav-sub{position:absolute;top:calc(100% + 10px);left:-16px;background:#fff;border:1px solid var(--rule);min-width:176px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease;z-index:10;}
-.nav-has-sub:hover .nav-sub,.nav-has-sub:focus-within .nav-sub{opacity:1;pointer-events:auto;transform:translateY(0);}
-.nav-sub li a{display:block;padding:10px 18px;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);white-space:nowrap;transition:color .2s;}
-.nav-sub li a:hover{color:var(--g);}
-.nav-sub li+li{border-top:1px solid var(--rule);}
-
-.lbl{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:18px;}
-.lbl-sq{width:9px;height:9px;background:var(--g2);flex-shrink:0;}
-
-/* FOOTER */
-footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content:space-between;align-items:flex-start;}
-.fl .logo{display:block;margin-bottom:14px;}.fl .logo img{width:160px;height:auto;display:block;}
-.fl p{font-size:12px;font-weight:300;color:rgba(255,255,255,.28);line-height:1.6;max-width:240px;}
-.flinks{display:flex;flex-direction:column;gap:10px;}
-.flinks a{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
-.flinks a:hover{color:#fff;}
-.fc{text-align:right;}
-.fc p{font-size:13px;font-weight:300;color:rgba(255,255,255,.35);margin-bottom:6px;}
-.fc a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
-.fc a:hover{color:#fff;}
-.fb{background:#000;padding:18px 52px;display:flex;justify-content:space-between;align-items:center;}
-.fb p{font-size:10px;font-weight:300;letter-spacing:.1em;color:rgba(255,255,255,.18);}
-
 /* ── ARTICLE HERO */
 .article-hero{background:var(--g);padding:120px 52px 80px;margin-top:64px;}
 .article-hero-inner{max-width:760px;margin:0 auto;}
@@ -142,16 +83,8 @@ footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content
 /* Loading / error state */
 .article-loading{font-size:14px;font-weight:300;color:var(--mid);letter-spacing:.06em;}
 
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.visible{opacity:1;transform:none;}
-
 @media(max-width:980px){
-  nav{padding:0 20px;}
-  .nav-left,.nav-right-links{display:none;}
-  .nav-burger{display:flex;}
   .article-hero,.article-body{padding-left:20px!important;padding-right:20px!important;}
-  footer{flex-direction:column;gap:36px;}.fc{text-align:left;}
-  .fb{flex-direction:column;gap:8px;text-align:center;}
 }
 @media(max-width:580px){
   .article-hero{padding-top:80px;padding-bottom:52px;}
@@ -160,59 +93,7 @@ footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content
 </head>
 <body>
 
-<nav id="mainNav">
-  <div class="nav-left-slot">
-    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-left">
-      <li><a href="../produce.html">Produce</a></li>
-      <li class="nav-has-sub">
-        <a href="../farms.html">Farms</a>
-        <ul class="nav-sub">
-          <li><a href="../farms.html#how-we-grow">How We Grow</a></li>
-          <li><a href="../farms.html#polichalur">Polichalur Farm</a></li>
-        </ul>
-      </li>
-      <li><a href="../vision.html">Vision</a></li>
-    </ul>
-  </div>
-  <a href="../index.html" class="nav-logo-center" aria-label="Akaththi Farms home">
-    <img src="../images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
-  </a>
-  <ul class="nav-right-links">
-    <li><a href="../recipes.html">Recipes</a></li>
-    <li><a href="../company.html" class="active">Company</a></li>
-    <li><a href="../join.html">Join Us</a></li>
-    <li><a href="../find.html">Find Us</a></li>
-  </ul>
-</nav>
-
-<div class="nav-mobile" id="navMobile" aria-hidden="true">
-  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">
-    <span></span><span></span>
-  </button>
-  <a href="#" class="nav-mobile-logo">
-    <img src="../images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
-  </a>
-  <ul class="nav-mobile-links">
-    <li><a href="../produce.html" class="nav-mobile-link">Produce</a></li>
-    <li>
-      <a href="../farms.html" class="nav-mobile-link">Farms</a>
-      <ul class="nav-mobile-sub">
-        <li><a href="../farms.html#how-we-grow" class="nav-mobile-link">How We Grow</a></li>
-        <li><a href="../farms.html#polichalur" class="nav-mobile-link">Polichalur Farm</a></li>
-      </ul>
-    </li>
-    <li><a href="../vision.html" class="nav-mobile-link">Vision</a></li>
-    <li class="nav-mobile-sep"></li>
-    <li><a href="../recipes.html" class="nav-mobile-link">Recipes</a></li>
-    <li><a href="../company.html" class="nav-mobile-link">Company</a></li>
-    <li><a href="../join.html" class="nav-mobile-link">Join Us</a></li>
-    <li><a href="../find.html" class="nav-mobile-link">Find Us</a></li>
-  </ul>
-  <p class="nav-mobile-contact">connect@akaththifarms.com<br>+91 80564 02434</p>
-</div>
+<div id="site-nav"></div>
 
 <!-- Hero — populated by JS -->
 <section class="article-hero">
@@ -235,11 +116,7 @@ footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content
 </section>
 
 <div id="site-footer"></div>
-<script>fetch('../footer.html').then(r=>r.text()).then(h=>{
-  h=h.replace(/href="((?!http|#|mailto|tel)[^"]+)"/g,function(m,p){return 'href="../'+p+'"';})
-     .replace(/src="((?!http|data)[^"]+)"/g,function(m,p){return 'src="../'+p+'"';});
-  document.getElementById('site-footer').outerHTML=h;
-});</script>
+<script>fetch('/footer.html').then(r=>r.text()).then(h=>{document.getElementById('site-footer').outerHTML=h;});</script>
 
 <script src="_data/news.js"></script>
 <script>
@@ -295,28 +172,11 @@ footer{background:var(--ink);padding:64px 52px 40px;display:flex;justify-content
 </script>
 
 <script>
-const navBurger=document.getElementById('navBurger');
-const navMobile=document.getElementById('navMobile');
-const navMobileClose=document.getElementById('navMobileClose');
-function closeMobileNav(){
-  navMobile.classList.remove('open');
-  navBurger.setAttribute('aria-expanded','false');
-  navMobile.setAttribute('aria-hidden','true');
-  document.body.style.overflow='';
-}
-navBurger.addEventListener('click',()=>{
-  const open=navMobile.classList.toggle('open');
-  navBurger.setAttribute('aria-expanded',String(open));
-  navMobile.setAttribute('aria-hidden',String(!open));
-  document.body.style.overflow=open?'hidden':'';
-});
-navMobileClose.addEventListener('click',closeMobileNav);
-document.querySelectorAll('.nav-mobile-link').forEach(link=>{link.addEventListener('click',closeMobileNav);});
-window.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav();});
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+<script src="/nav-loader.js"></script>
 </body>
 </html>

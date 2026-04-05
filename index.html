@@ -107,69 +107,8 @@
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 <style>
-:root{
-  /* Colors */
-  --g:#1B3F20;--g2:#2E6636;--g3:#4A7C59;
-  --bg:#EEF2E8;--w:#FFFFFF;--ink:#0E1A0F;--mid:#5A7062;
-  --gold:#C49A20;
-  --rule:rgba(27,63,32,.1);
-  /* Typography */
-  --fh:clamp(64px,9.5vw,140px);
-  --f2:clamp(42px,5.8vw,80px);
-  /* Layout */
-  --nav-h:64px;
-  /* Transitions */
-  --ease:.22s ease;
-  --ease-spring:.35s cubic-bezier(.22,1,.36,1);
-  /* Z-index */
-  --z-nav:999;--z-mobile-nav:1000;--z-modal:9999;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden;}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h);background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px;}
-.logo{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:.13em;color:var(--g);text-decoration:none;}
-.nav-left,.nav-right-links{list-style:none;display:flex;gap:22px;align-items:center;margin:0;padding:0;}
-.nav-right-links{justify-content:flex-end;}
-.nav-left a,.nav-right-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;}
-.nav-left a:hover,.nav-right-links a:hover,.nav-left a.active,.nav-right-links a.active{color:var(--g);}
-.nav-logo-center{display:flex;align-items:center;justify-content:center;text-decoration:none;transition:opacity .35s ease;}
-.nav-logo-center img{height:44px;width:auto;animation:logo-float 4s ease-in-out infinite;transition:transform .25s cubic-bezier(.34,1.56,.64,1),filter .25s ease;}
-.nav-logo-center:hover img{transform:scale(1.1) translateY(-2px);filter:drop-shadow(0 4px 10px rgba(27,63,32,.25));animation-play-state:paused;}
-.nav-logo-center:active img{transform:scale(.96) translateY(0);transition-duration:.1s;}
-@keyframes logo-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-3px);}}
-.nav-left-slot{display:flex;align-items:center;gap:20px;}
-.nav-burger{display:none;flex-direction:column;justify-content:center;gap:8px;background:none;border:none;cursor:pointer;padding:6px;height:40px;width:40px;flex-shrink:0;}
-.nav-burger span{display:block;width:22px;height:2px;background:var(--g);transition:all .35s cubic-bezier(.22,1,.36,1);transform-origin:center;}
-.nav-mobile{position:fixed;inset:0;background:var(--g);z-index:var(--z-mobile-nav);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s ease;padding:48px;}
-.nav-mobile.open{opacity:1;pointer-events:auto;}
-.nav-mobile-close{position:absolute;top:20px;left:24px;background:none;border:none;cursor:pointer;width:40px;height:40px;padding:6px;display:flex;flex-direction:column;justify-content:center;gap:0;}
-.nav-mobile-close span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.7);transform-origin:center;transition:background .2s;}
-.nav-mobile-close span:nth-child(1){transform:translateY(.75px) rotate(45deg);}
-.nav-mobile-close span:nth-child(2){transform:translateY(-.75px) rotate(-45deg);}
-.nav-mobile-close:hover span{background:#fff;}
-.nav-mobile-logo{position:absolute;top:14px;left:50%;transform:translateX(-50%);opacity:.55;}
-.nav-mobile-logo img{height:36px;width:auto;filter:brightness(0) invert(1);}
-.nav-mobile-links{list-style:none;padding:0;margin:0;}
-.nav-mobile-links a{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,10vw,64px);letter-spacing:.03em;color:#fff;text-decoration:none;display:block;padding:4px 0;line-height:1.15;transition:opacity .2s;}
-.nav-mobile-links a:hover{opacity:.6;}
-.nav-mobile-sep{height:1px;background:rgba(255,255,255,.15);margin:16px 0;width:60px;}
-.nav-mobile-contact{margin-top:40px;font-size:11px;font-weight:300;letter-spacing:.08em;color:rgba(255,255,255,.65);line-height:1.8;}
-.nav-mobile-sub{list-style:none;padding:0;margin:2px 0 6px 20px;}
-.nav-mobile-sub a{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:300;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;display:block;padding:7px 0;transition:color .2s;}
-.nav-mobile-sub a:hover{color:rgba(255,255,255,.85);}
-/* ── Dropdown submenu ── */
-
-.btn{display:inline-block;font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:15px 28px;transition:all .22s;border:none;cursor:pointer;}
-.btn-solid{background:var(--g2);color:#fff;}.btn-solid:hover{background:var(--g);}
-.btn-solid-w{background:#fff;color:var(--g);}.btn-solid-w:hover{background:var(--bg);color:var(--g);}
-.btn-ghost{background:transparent;color:var(--g2);border:1.5px solid var(--g2);}.btn-ghost:hover{background:var(--g2);color:#fff;}
-.btn-ghost-w{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.38);}.btn-ghost-w:hover{background:#fff;color:var(--g);}
-.lbl{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:18px;}
-.lbl-sq{width:9px;height:9px;background:var(--g2);flex-shrink:0;}
 
 /* ── HERO ── */
 .hero{position:relative;width:100%;overflow:hidden;margin-top:var(--nav-h);}
@@ -455,19 +394,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
   color:var(--gold);border-bottom:1px solid rgba(196,154,32,.4);
   padding-bottom:2px;text-decoration:none;transition:opacity .2s;}
 .ig-follow-btn:hover{opacity:.7;}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.visible{opacity:1;transform:none;}
-
 @keyframes su{from{opacity:0;transform:translateY(52px);}to{opacity:1;transform:translateY(0);}}
 @keyframes mu{from{opacity:0;transform:translateY(48px) scale(.88);}to{opacity:1;transform:translateY(0) scale(1);}}
 @keyframes fu{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
 @keyframes fi{from{opacity:0;}to{opacity:1;}}
 
 @media(max-width:980px){
-  nav{padding:0 20px;}
-  .nav-left,.nav-right-links{display:none;}
-  .nav-burger{display:flex;}
-  .nav-mobile-logo,.nav-mobile-close{display:flex;}
   .cform-row{grid-template-columns:1fr;}
   .recipes-grid,.news-grid,.insta-grid{grid-template-columns:repeat(2,1fr);}
   .insta-hdr{flex-direction:column;gap:10px;align-items:flex-start;}
@@ -501,6 +433,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
 .vc-img{position:relative;}
 .vc-img::after{content:'';position:absolute;inset:0;z-index:1;}
 @media(max-width:580px){.var-grid,.var-grid-3{grid-template-columns:1fr;}}
+.var-mg{margin-top:2px;background:var(--g);padding:40px 48px;display:flex;align-items:center;gap:48px;flex-wrap:wrap;}
+.var-mg-badge{font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--g);background:#C49A20;padding:4px 10px;border-radius:2px;align-self:flex-start;flex-shrink:0;}
+.var-mg-content{flex:1;}
+.var-mg-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4vw,56px);letter-spacing:.02em;color:var(--w);line-height:.9;margin:10px 0 8px;}
+.var-mg-em{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:17px;color:rgba(255,255,255,.7);margin:0 0 14px;}
+.var-mg-body{font-size:14px;line-height:1.65;color:rgba(255,255,255,.6);max-width:520px;margin:0;}
+.var-mg-cta{flex-shrink:0;}
+@media(max-width:680px){.var-mg{padding:32px 20px;flex-direction:column;gap:24px;}.var-mg-cta{width:100%;}}
 
 @media(max-width:580px){.recipes-grid,.news-grid,.insta-grid{grid-template-columns:1fr!important;}}
 @media(max-height:580px){
@@ -530,54 +470,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
 </head>
 <body>
 
-<nav id="mainNav">
-  <div class="nav-left-slot">
-    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <ul class="nav-left">
-      <li><a href="produce.html">Produce</a></li>
-      <li><a href="farms.html">Farms</a></li>
-      <li><a href="vision.html">Vision</a></li>
-    </ul>
-  </div>
-  <a href="index.html" class="nav-logo-center" aria-label="Akaththi Farms home">
-    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
-  </a>
-  <ul class="nav-right-links">
-    <li><a href="recipes.html">Recipes</a></li>
-    <li><a href="company.html">Company</a></li>
-    <li><a href="join.html">Join Us</a></li>
-    <li><a href="find.html">Find Us</a></li>
-  </ul>
-</nav>
-
-<!-- Mobile Navigation Overlay -->
-<div class="nav-mobile" id="navMobile" aria-hidden="true">
-  <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">
-    <span></span><span></span>
-  </button>
-  <a href="#" class="nav-mobile-logo">
-    <img src="./images/akaththi-farms-illustration-300dpi.png" alt="Akaththi Farms">
-  </a>
-  <ul class="nav-mobile-links">
-    <li><a href="produce.html" class="nav-mobile-link">Produce</a></li>
-    <li>
-      <a href="farms.html" class="nav-mobile-link">Farms</a>
-      <ul class="nav-mobile-sub">
-        <li><a href="farms.html#how-we-grow" class="nav-mobile-link">How We Grow</a></li>
-        <li><a href="farms.html#polichalur" class="nav-mobile-link">Polichalur Farm</a></li>
-      </ul>
-    </li>
-    <li><a href="vision.html" class="nav-mobile-link">Vision</a></li>
-    <li class="nav-mobile-sep"></li>
-    <li><a href="recipes.html" class="nav-mobile-link">Recipes</a></li>
-    <li><a href="company.html" class="nav-mobile-link">Company</a></li>
-    <li><a href="join.html" class="nav-mobile-link">Join Us</a></li>
-    <li><a href="find.html" class="nav-mobile-link">Find Us</a></li>
-  </ul>
-  <p class="nav-mobile-contact">connect@akaththifarms.com<br>+91 80564 02434</p>
-</div>
+<div id="site-nav"></div>
 
 <!-- HERO -->
 <section class="hero" id="hero">
@@ -607,7 +500,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
     <div class="slide s-plain active" id="sl0">
       <div class="lbl"><span class="lbl-sq"></span>What We Grow</div>
       <h2 class="sh sh-l">Good food<br>starts with<br>good growing.<br><em>Nothing more.</em></h2>
-      <p class="sp sp-l">We grow exotic mushrooms that taste the way they should — because we control every variable from spore to harvest. No shortcuts. No compromises.</p>
+      <p class="sp sp-l">We grow exotic mushrooms — and soon, ultra-fresh microgreens — because we control every variable from spore to harvest. No shortcuts. No compromises.</p>
       <div class="sb">
         <a href="#produce" class="btn btn-solid">Our Produce</a>
         <a href="#grow" class="btn btn-ghost">The Science</a>
@@ -721,9 +614,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
     <div class="var-head reveal">
       <div>
         <div class="lbl"><span class="lbl-sq"></span>Produce</div>
-        <h2 class="var-h">The mushrooms.<br>All of them.</h2>
+        <h2 class="var-h">Mushrooms.<br>Microgreens.</h2>
       </div>
-      <p class="var-intro">Three varieties available now. Each one grown because it deserves to be on a serious plate — flavourful, fresh, and honestly sourced.</p>
+      <p class="var-intro">Three mushroom varieties available now. Microgreens coming soon — grown to order for restaurants, cafes, and homes. Every variety chosen because it deserves to be on a serious plate.</p>
     </div>
     <div class="var-grid reveal">
       <div class="vc" >
@@ -763,6 +656,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
         <span>King Oyster</span>
         <span>Pioppino</span>
         <span>Shimeji</span>
+      </div>
+    </div>
+
+    <!-- § MICROGREENS COMING SOON -->
+    <div class="var-mg reveal">
+      <div class="var-mg-badge">Coming Soon</div>
+      <div class="var-mg-content">
+        <h3 class="var-mg-h">Microgreens.</h3>
+        <p class="var-mg-em">Ultrafresh. Custom-grown for your requirements.</p>
+        <p class="var-mg-body">The most nutritionally dense food you can put on a plate — grown to order for restaurants, cafes, and homes. No batch stock. No shelf days. We grow what you need, when you need it.</p>
+      </div>
+      <div class="var-mg-cta">
+        <a href="#partner" class="btn btn-ghost-w">Register Interest →</a>
       </div>
     </div>
 
@@ -810,7 +716,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
 <section class="sec-cta" id="partner">
   <div class="lbl reveal"><span class="lbl-sq"></span>For Chefs &amp; Restaurants</div>
   <h2 class="cta-h reveal">Consistent.<br>Fresh. Honest.</h2>
-  <p class="cta-sub reveal">Weekly allocations. Guaranteed quality. Varieties you can't source reliably anywhere else. We keep it simple — good mushrooms, on time, every time.</p>
+  <p class="cta-sub reveal">Weekly allocations. Guaranteed quality. Varieties you can't source reliably anywhere else. We keep it simple — quality produce, on time, every time.</p>
   <div class="cta-btns reveal">
     <a href="find.html#partner" class="btn btn-solid">Partner With Us</a>
   </div>
@@ -975,7 +881,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-h)
 </section>
 
 <div id="site-footer"></div>
-<script>fetch('footer.html').then(r=>r.text()).then(h=>{document.getElementById('site-footer').outerHTML=h;});</script>
+<script>fetch('/footer.html').then(r=>r.text()).then(h=>{document.getElementById('site-footer').outerHTML=h;});</script>
 
 
 <!-- ══════════ SHOP MODAL ══════════ -->
@@ -1150,28 +1056,7 @@ document.getElementById('cfSubmit').addEventListener('click', submitContact);
 
 // Close modals on Escape
 window.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeShop(); closeContact(); closeMobileNav(); }
-});
-
-// ── Mobile nav
-const navBurger     = document.getElementById('navBurger');
-const navMobile     = document.getElementById('navMobile');
-const navMobileClose = document.getElementById('navMobileClose');
-function closeMobileNav(){
-  navMobile.classList.remove('open');
-  navBurger.setAttribute('aria-expanded','false');
-  navMobile.setAttribute('aria-hidden','true');
-  document.body.style.overflow = '';
-}
-navBurger.addEventListener('click', () => {
-  const open = navMobile.classList.toggle('open');
-  navBurger.setAttribute('aria-expanded', String(open));
-  navMobile.setAttribute('aria-hidden', String(!open));
-  document.body.style.overflow = open ? 'hidden' : '';
-});
-navMobileClose.addEventListener('click', closeMobileNav);
-document.querySelectorAll('.nav-mobile-link').forEach(link => {
-  link.addEventListener('click', closeMobileNav);
+  if (e.key === 'Escape') { closeShop(); closeContact(); }
 });
 
 })();
@@ -1185,5 +1070,6 @@ document.querySelectorAll('.nav-mobile-link').forEach(link => {
   });
 })();
 </script>
+<script src="/nav-loader.js"></script>
 </body>
 </html>
