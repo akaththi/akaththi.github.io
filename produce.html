@@ -53,7 +53,7 @@
             "description": "Hypsizygus ulmarius — mild, firm, and versatile. Ideal for curries, stir-fries, and grilling.",
             "image": "https://www.akaththifarms.com/images/elm-oyster.png",
             "brand": {"@type": "Brand", "name": "Akaththí Farms"},
-            "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "seller": {"@id": "https://www.akaththifarms.com/#organization"}}
+            "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "seller": {"@id": "https://www.akaththifarms.com/#organization"}, "shippingDetails": {"@id": "https://www.akaththifarms.com/produce.html#shipping"}, "hasMerchantReturnPolicy": {"@id": "https://www.akaththifarms.com/produce.html#returns"}}
           }
         },
         {
@@ -65,7 +65,7 @@
             "description": "Pleurotus djamor — vibrant colour, slightly sweet, quick-cooking. Great for stir-fries and garnishing.",
             "image": "https://www.akaththifarms.com/images/pink-oyster.png",
             "brand": {"@type": "Brand", "name": "Akaththí Farms"},
-            "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "seller": {"@id": "https://www.akaththifarms.com/#organization"}}
+            "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "seller": {"@id": "https://www.akaththifarms.com/#organization"}, "shippingDetails": {"@id": "https://www.akaththifarms.com/produce.html#shipping"}, "hasMerchantReturnPolicy": {"@id": "https://www.akaththifarms.com/produce.html#returns"}}
           }
         },
         {
@@ -77,10 +77,27 @@
             "description": "Pleurotus citrinopileatus — delicate, nutty, visually striking. Perfect for sautéing and noodle dishes.",
             "image": "https://www.akaththifarms.com/images/golden-oyster.png",
             "brand": {"@type": "Brand", "name": "Akaththí Farms"},
-            "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "seller": {"@id": "https://www.akaththifarms.com/#organization"}}
+            "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "seller": {"@id": "https://www.akaththifarms.com/#organization"}, "shippingDetails": {"@id": "https://www.akaththifarms.com/produce.html#shipping"}, "hasMerchantReturnPolicy": {"@id": "https://www.akaththifarms.com/produce.html#returns"}}
           }
         }
       ]
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "@id": "https://www.akaththifarms.com/produce.html#shipping",
+      "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "INR"},
+      "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IN", "addressRegion": "Tamil Nadu"},
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"},
+        "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "MerchantReturnPolicy",
+      "@id": "https://www.akaththifarms.com/produce.html#returns",
+      "applicableCountry": "IN",
+      "returnPolicyCategory": "https://schema.org/ReturnNotPermitted"
     }
   ]
 }
