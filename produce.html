@@ -139,6 +139,7 @@
 .var-intro{font-size:17px;font-weight:300;line-height:1.75;color:var(--mid);padding-bottom:24px;border-bottom:1px solid var(--rule);}
 .var-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
 .var-grid-3{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:2px;}
+.var-grid-mg{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;}
 
 /* VARIETY CARD */
 .vc{background:var(--bg);display:flex;flex-direction:column;transition:all .32s cubic-bezier(.22,1,.36,1);overflow:hidden;}
@@ -184,8 +185,9 @@
   .var-head{grid-template-columns:1fr;gap:24px;}
   .var-grid{grid-template-columns:repeat(2,1fr);}
   .var-grid-3{grid-template-columns:repeat(2,1fr);}
+  .var-grid-mg{grid-template-columns:repeat(3,1fr);}
 }
-@media(max-width:580px){.var-grid,.var-grid-3{grid-template-columns:1fr;}}
+@media(max-width:580px){.var-grid,.var-grid-3,.var-grid-mg{grid-template-columns:1fr;}}
 .var-mg{margin-top:2px;background:var(--g);padding:40px 48px;display:flex;align-items:center;gap:48px;flex-wrap:wrap;}
 .var-mg-badge{font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--g);background:#C49A20;padding:4px 10px;border-radius:2px;align-self:flex-start;flex-shrink:0;}
 .var-mg-content{flex:1;}
@@ -310,6 +312,59 @@
     <div class="vc-name">Shimeji</div>
     <div class="vc-lat">Hypsizygus tessellatus</div>
     <p class="vc-desc">Mild, subtly sweet, delicate clusters. A Japanese kitchen essential, grown with integrity.</p>
+  </div>
+</div></div>
+  </div>
+</section>
+
+<section class="sec-var" style="background:var(--bg);padding-top:0;">
+  <div class="var-inner">
+    <div class="var-head reveal">
+      <div>
+        <div class="lbl"><span class="lbl-sq"></span>Microgreens</div>
+        <h2 class="var-h">Five varieties.<br>Coming soon.</h2>
+      </div>
+      <p class="var-intro">Ultrafresh, custom-grown for restaurants, cafes, and homes. No batch stock — we grow what you need, when you need it.</p>
+    </div>
+    <div class="var-grid-mg reveal"><div class="vc" style="opacity:.58">
+  <div class="vc-top"><span class="vc-n">M1</span><span class="vc-badge" style="background:rgba(196,154,32,.1);color:#9A740A">Coming Soon</span></div>
+  <div class="vc-img"><div class="vc-svg"><img src="./images/pink-radish-microgreens.png" alt="Pink Radish microgreens" style="width:100%;height:100%;object-fit:contain;display:block;"></div><div class="vc-shad"></div></div>
+  <div class="vc-info">
+    <div class="vc-name">Pink Radish</div>
+    <div class="vc-lat">Raphanus sativus</div>
+    <p class="vc-desc">Peppery, crisp, vividly pink-stemmed. A sharp, colourful finish for salads, tacos, and plated mains.</p>
+  </div>
+</div><div class="vc" style="opacity:.58">
+  <div class="vc-top"><span class="vc-n">M2</span><span class="vc-badge" style="background:rgba(196,154,32,.1);color:#9A740A">Coming Soon</span></div>
+  <div class="vc-img"><div class="vc-svg"><img src="./images/sunflower-microgreens.png" alt="Sunflower microgreens" style="width:100%;height:100%;object-fit:contain;display:block;"></div><div class="vc-shad"></div></div>
+  <div class="vc-info">
+    <div class="vc-name">Sunflower</div>
+    <div class="vc-lat">Helianthus annuus</div>
+    <p class="vc-desc">Crunchy, nutty, faintly sweet. Dense texture built for sandwiches, bowls, and garnish that actually holds up.</p>
+  </div>
+</div><div class="vc" style="opacity:.58">
+  <div class="vc-top"><span class="vc-n">M3</span><span class="vc-badge" style="background:rgba(196,154,32,.1);color:#9A740A">Coming Soon</span></div>
+  <div class="vc-img"><div class="vc-svg"><img src="./images/mustard-microgreens.png" alt="Mustard microgreens" style="width:100%;height:100%;object-fit:contain;display:block;"></div><div class="vc-shad"></div></div>
+  <div class="vc-info">
+    <div class="vc-name">Mustard</div>
+    <div class="vc-lat">Brassica juncea</div>
+    <p class="vc-desc">Sharp, wasabi-like heat in miniature form. A bold finishing note for rich, fatty dishes.</p>
+  </div>
+</div><div class="vc" style="opacity:.58">
+  <div class="vc-top"><span class="vc-n">M4</span><span class="vc-badge" style="background:rgba(196,154,32,.1);color:#9A740A">Coming Soon</span></div>
+  <div class="vc-img"><div class="vc-svg"><img src="./images/red-amaranthus-microgreens.png" alt="Red Amaranthus microgreens" style="width:100%;height:100%;object-fit:contain;display:block;"></div><div class="vc-shad"></div></div>
+  <div class="vc-info">
+    <div class="vc-name">Red Amaranthus</div>
+    <div class="vc-lat">Amaranthus tricolor</div>
+    <p class="vc-desc">Deep magenta leaves, earthy and slightly sweet. As striking on the plate as it is nutrient-dense.</p>
+  </div>
+</div><div class="vc" style="opacity:.58">
+  <div class="vc-top"><span class="vc-n">M5</span><span class="vc-badge" style="background:rgba(196,154,32,.1);color:#9A740A">Coming Soon</span></div>
+  <div class="vc-img"><div class="vc-svg"><img src="./images/white-radish-microgreens.png" alt="White Radish microgreens" style="width:100%;height:100%;object-fit:contain;display:block;"></div><div class="vc-shad"></div></div>
+  <div class="vc-info">
+    <div class="vc-name">White Radish</div>
+    <div class="vc-lat">Raphanus sativus</div>
+    <p class="vc-desc">Clean, peppery bite with pale, delicate stems. A quieter counterpart to pink radish — equally versatile.</p>
   </div>
 </div></div>
   </div>
