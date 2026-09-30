@@ -53,7 +53,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "url": "https://wa.me/message/OGER5OPHOB7NC1"
+        "url": "https://wa.me/918056402434"
       },
       "sameAs": ["https://www.instagram.com/akaththifarms", "https://www.linkedin.com/company/akaththifarms", "https://www.facebook.com/profile.php?id=61588527205425", "https://share.google/oZgZpgBOGuljRKfnE", "https://maps.app.goo.gl/exGoKvu71bGuWs3m6"]
     },
@@ -288,24 +288,6 @@
 .modal-wa svg{width:18px;height:18px;flex-shrink:0;}
 .modal-sub{margin-top:16px;font-size:11px;font-weight:300;color:var(--mid);opacity:.5;}
 
-/* ── CONTACT FORM MODAL ── */
-.cmodal-box{max-width:580px;text-align:left;}
-.cform{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
-.cform-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.cf-group{display:flex;flex-direction:column;gap:6px;}
-.cf-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);}
-.cf-input,.cf-textarea{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;
-  color:var(--ink);background:var(--bg);border:1px solid rgba(27,63,32,.28);
-  padding:12px 14px;outline:none;transition:border-color .2s;resize:none;width:100%;}
-.cf-input:focus,.cf-textarea:focus{border-color:var(--g2);}
-.cf-textarea{min-height:110px;}
-.cf-submit{background:var(--g);color:#fff;padding:14px 28px;font-size:10px;font-weight:500;
-  letter-spacing:.18em;text-transform:uppercase;border:none;cursor:pointer;
-  transition:background .2s;align-self:flex-start;}
-.cf-submit:hover{background:var(--g2);}
-.cf-status{font-size:13px;font-weight:300;color:var(--mid);min-height:20px;margin-top:4px;}
-.cf-status.ok{color:var(--g2);}.cf-status.err{color:#C05032;}
-
 /* ── RECIPES TEASER ── */
 .sec-recipes{background:var(--g);padding:100px 52px;}
 .recipes-inner{max-width:1200px;margin:0 auto;}
@@ -404,7 +386,6 @@
 @keyframes fi{from{opacity:0;}to{opacity:1;}}
 
 @media(max-width:980px){
-  .cform-row{grid-template-columns:1fr;}
   .recipes-grid,.news-grid,.insta-grid{grid-template-columns:repeat(2,1fr);}
   .insta-hdr{flex-direction:column;gap:10px;align-items:flex-start;}
   .sec-recipes,.sec-news,.sec-insta{padding:72px 20px;}
@@ -465,12 +446,6 @@
     gtag('js', new Date());
     gtag('config', 'G-FZ3J83K6JX');
   </script>
-  <!-- ═════════════════════════ EmailJS ════════════════════════════════════════
-       TODO: Sign up free at emailjs.com
-       Get: Public Key (Account > API Keys), Service ID, Template ID
-       Template variables needed: {{from_name}} {{from_email}} {{phone}} {{message}} ══ -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init({ publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' }); // TODO: replace</script>
 </head>
 <body>
 
@@ -486,7 +461,7 @@
     <h1 class="hero-title">Grown for the ones<br>who eat<br>with intention.</h1>
     <p class="hero-sub">Fresh oyster mushrooms, grown pesticide-free in Tamil Nadu and delivered across Chennai — for the ones who care.</p>
     <div class="hero-cta">
-      <a href="find.html#order-direct" class="btn btn-solid-w">Shop Now</a>
+      <a href="find.html#order-direct" class="btn btn-solid-w" id="shopNowBtn">Shop Now</a>
       <a href="find.html#partner" class="btn btn-ghost-w">Get in Touch</a>
     </div>
   </div>
@@ -836,7 +811,7 @@
         <div class="lbl"><span class="lbl-sq"></span>Instagram</div>
         <h2 class="insta-h">From the<br>farm floor.</h2>
       </div>
-      <a href="https://www.instagram.com/akaththifarms" target="_blank" class="insta-handle">@akaththifarms ↗</a>
+      <a href="https://www.instagram.com/akaththifarms" target="_blank" rel="noopener" class="insta-handle">@akaththifarms ↗</a>
     </div>
     <div class="insta-grid reveal">
 
@@ -877,7 +852,7 @@
 
       <div class="ig-tile ig-follow-tile">
         <p class="ig-follow-quote">"Grown honestly.<br>Delivered fresh."</p>
-        <a href="https://www.instagram.com/akaththifarms" target="_blank" class="ig-follow-btn">Follow on Instagram ↗</a>
+        <a href="https://www.instagram.com/akaththifarms" target="_blank" rel="noopener" class="ig-follow-btn">Follow on Instagram ↗</a>
       </div>
 
     </div>
@@ -895,7 +870,7 @@
     <div class="modal-lbl">Shop</div>
     <h2 class="modal-h">We're building<br>something good.</h2>
     <p class="modal-p">Our online shop is almost here. In the meantime, place your order directly on WhatsApp — we respond within the hour and deliver same-day across Chennai.</p>
-    <a href="https://wa.me/message/OGER5OPHOB7NC1" target="_blank" class="modal-wa">
+    <a href="https://wa.me/918056402434?text=Hi%20Akaththi%20Farms%21%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="modal-wa">
       <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
         <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.845L0 24l6.335-1.501A11.933 11.933 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 0 1-5.003-1.374l-.36-.214-3.72.88.939-3.627-.235-.374A9.794 9.794 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
@@ -903,37 +878,6 @@
       Order Now
     </a>
     <p class="modal-sub">+91 80564 02434 · connect@akaththifarms.com</p>
-  </div>
-</div>
-
-<!-- ══════════ CONTACT FORM MODAL ══════════ -->
-<div class="modal-overlay" id="contactModal">
-  <div class="modal-box cmodal-box">
-    <button class="modal-close" id="contactModalClose">✕</button>
-    <div class="modal-lbl">Get in Touch</div>
-    <h2 class="modal-h" style="font-size:36px;text-align:left">Let's talk<br>mushrooms.</h2>
-    <div class="cform">
-      <div class="cform-row">
-        <div class="cf-group">
-          <label class="cf-label">Your Name</label>
-          <input class="cf-input" id="cf_name" type="text" placeholder="Ravi Kumar">
-        </div>
-        <div class="cf-group">
-          <label class="cf-label">Phone</label>
-          <input class="cf-input" id="cf_phone" type="tel" placeholder="+91 98765 43210">
-        </div>
-      </div>
-      <div class="cf-group">
-        <label class="cf-label">Email</label>
-        <input class="cf-input" id="cf_email" type="email" placeholder="ravi@restaurant.com">
-      </div>
-      <div class="cf-group">
-        <label class="cf-label">Message</label>
-        <textarea class="cf-textarea" id="cf_msg" placeholder="Tell us what you need — variety, quantity, delivery frequency..."></textarea>
-      </div>
-      <button class="cf-submit" id="cfSubmit">Send Message</button>
-      <div class="cf-status" id="cf_status"></div>
-    </div>
   </div>
 </div>
 <script>
@@ -948,7 +892,7 @@ const FEATURES = {
   partnerCta: true,
   recipes:    true,
   news:       true,
-  instagram:  false,  // placeholder not ready
+  instagram:  true,
 };
 const SECTION_MAP = {
   hero:       '#hero',
@@ -1016,51 +960,18 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// ── Modals
-const shopModal    = document.getElementById('shopModal');
-const contactModal = document.getElementById('contactModal');
-function openShop()    { shopModal.classList.add('open'); }
-function closeShop()   { shopModal.classList.remove('open'); }
-function openContact() { contactModal.classList.add('open'); }
-function closeContact(){ contactModal.classList.remove('open'); }
+// ── Modal
+const shopModal = document.getElementById('shopModal');
+function openShop()  { shopModal.classList.add('open'); }
+function closeShop() { shopModal.classList.remove('open'); }
 
-shopModal.addEventListener('click',    e => { if (e.target === shopModal) closeShop(); });
-contactModal.addEventListener('click', e => { if (e.target === contactModal) closeContact(); });
+shopModal.addEventListener('click', e => { if (e.target === shopModal) closeShop(); });
 document.getElementById('shopModalClose').addEventListener('click', closeShop);
-document.getElementById('contactModalClose').addEventListener('click', closeContact);
+document.getElementById('shopNowBtn').addEventListener('click', e => { e.preventDefault(); openShop(); });
 
-// ── Contact form — EmailJS
-// TODO: Set your Service ID and Template ID from emailjs.com dashboard
-// Template must have variables: {{from_name}}, {{from_email}}, {{phone}}, {{message}}
-function submitContact(){
-  const name   = document.getElementById('cf_name').value.trim();
-  const phone  = document.getElementById('cf_phone').value.trim();
-  const email  = document.getElementById('cf_email').value.trim();
-  const msg    = document.getElementById('cf_msg').value.trim();
-  const status = document.getElementById('cf_status');
-  if (!name || !email || !msg) {
-    status.textContent = 'Please fill in name, email and message.';
-    status.className = 'cf-status err'; return;
-  }
-  status.textContent = 'Sending...'; status.className = 'cf-status';
-  emailjs.send(
-    'YOUR_SERVICE_ID',   // TODO: replace with your EmailJS Service ID
-    'YOUR_TEMPLATE_ID',  // TODO: replace with your EmailJS Template ID
-    { from_name:name, from_email:email, phone:phone||'—', message:msg }
-  ).then(() => {
-    status.textContent = "✓ Message sent. We'll be in touch within 24 hours.";
-    status.className = 'cf-status ok';
-    ['cf_name','cf_phone','cf_email','cf_msg'].forEach(id => document.getElementById(id).value='');
-  }).catch(() => {
-    status.textContent = 'Something went wrong. Email us at connect@akaththifarms.com';
-    status.className = 'cf-status err';
-  });
-}
-document.getElementById('cfSubmit').addEventListener('click', submitContact);
-
-// Close modals on Escape
+// Close modal on Escape
 window.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeShop(); closeContact(); }
+  if (e.key === 'Escape') closeShop();
 });
 
 })();
