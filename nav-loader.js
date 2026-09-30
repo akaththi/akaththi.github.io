@@ -25,12 +25,15 @@
         mobile.classList.remove('open');
         burger.setAttribute('aria-expanded', 'false');
         mobile.setAttribute('aria-hidden', 'true');
+        mobile.setAttribute('inert', '');
         document.body.style.overflow = '';
       }
       burger.addEventListener('click', () => {
         const open = mobile.classList.toggle('open');
         burger.setAttribute('aria-expanded', String(open));
         mobile.setAttribute('aria-hidden', String(!open));
+        if (open) mobile.removeAttribute('inert');
+        else mobile.setAttribute('inert', '');
         document.body.style.overflow = open ? 'hidden' : '';
       });
       if (closeBtn) closeBtn.addEventListener('click', closeMobileNav);

@@ -50,7 +50,7 @@ const NEWS = [
       <p>But there's a catch most people don't know about: beta-glucan content degrades with time post-harvest. The rate depends on storage temperature, humidity, and handling — but studies consistently show significant degradation within 48–72 hours at ambient temperature.</p>
       <h2>Why distance matters</h2>
       <p>Most mushrooms sold in Indian supermarkets have travelled from farms in Himachal Pradesh or Uttarakhand. That's a 2–4 day cold chain at minimum — often much longer. By the time they reach your kitchen, the nutritional potency is measurably lower.</p>
-      <p>When Akaththi grows in Chennai and delivers same-day, we're not just offering freshness as an aesthetic — we're preserving the actual nutritional case for eating mushrooms in the first place.</p>
+      <p>When Akaththi grows to order in Chennai and delivers within 2–6 hours of harvest, we're not just offering freshness as an aesthetic — we're preserving the actual nutritional case for eating mushrooms in the first place.</p>
       <blockquote>Fresh is not a marketing word. It's a measurable difference in what you're actually eating.</blockquote>
     `
   },

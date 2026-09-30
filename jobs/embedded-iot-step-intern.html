@@ -20,14 +20,53 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "JobPosting",
-  "title": "Embedded Systems & IoT STEP Intern",
-  "description": "Build sensor networks, firmware, and real-time data pipelines for a live urban mushroom farm in Chennai.",
-  "employmentType": "INTERN",
-  "hiringOrganization": {"@type": "Organization", "name": "Akaththí Farms", "sameAs": "https://www.akaththifarms.com"},
-  "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}},
-  "datePosted": "2025-07-15",
-  "url": "https://www.akaththifarms.com/jobs/embedded-iot-step-intern.html"
+  "@graph": [
+    {
+      "@type": "JobPosting",
+      "title": "Embedded Systems & IoT STEP Intern",
+      "description": "Build sensor networks, firmware, and real-time data pipelines for a live urban mushroom farm in Chennai.",
+      "employmentType": "INTERN",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Akaththí Farms",
+        "sameAs": "https://www.akaththifarms.com"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chennai",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        }
+      },
+      "datePosted": "2025-07-15",
+      "url": "https://www.akaththifarms.com/jobs/embedded-iot-step-intern.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.akaththifarms.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Join Us",
+          "item": "https://www.akaththifarms.com/join.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Embedded Systems & IoT STEP Intern",
+          "item": "https://www.akaththifarms.com/jobs/embedded-iot-step-intern.html"
+        }
+      ]
+    }
+  ]
 }
 </script>
 <link rel="stylesheet" href="/styles.css">
