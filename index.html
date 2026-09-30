@@ -259,7 +259,7 @@
 .cta-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,104px);color:var(--g);line-height:.88;letter-spacing:.01em;margin-bottom:22px;}
 .cta-sub{font-size:18px;font-weight:300;line-height:1.7;color:var(--mid);max-width:500px;margin:0 auto 36px;}
 .cta-btns{display:flex;gap:14px;justify-content:center;}
-.sec-cta .lbl{color:var(--mid);justify-content:center;opacity:.6;}
+.sec-cta .lbl{color:var(--mid);justify-content:center;}
 
 /* FOOTER — styles live in footer.html */
 
@@ -451,6 +451,7 @@
 
 <div id="site-nav"></div>
 
+<main>
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-inner">
@@ -508,9 +509,9 @@
   </div>
 
   <div class="ctrl" id="ctrlEl">
-    <button class="dot on" data-i="0"></button>
-    <button class="dot" data-i="1"></button>
-    <button class="dot" data-i="2"></button>
+    <button class="dot on" data-i="0" aria-label="Go to slide 1"></button>
+    <button class="dot" data-i="1" aria-label="Go to slide 2"></button>
+    <button class="dot" data-i="2" aria-label="Go to slide 3"></button>
   </div>
   <div class="arr-wrap">
     <button class="arr" id="arrP">←</button>
@@ -858,6 +859,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <div id="site-footer"></div>
 <script>fetch('/footer.html').then(r=>r.text()).then(h=>{document.getElementById('site-footer').outerHTML=h;});</script>
