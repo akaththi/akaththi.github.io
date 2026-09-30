@@ -130,11 +130,11 @@ Inspired by **Bowery Farming's** editorial brand style — but warmer and more r
 | Location | Store |
 |---|---|
 | Anna Nagar, Chennai | MK Cheese & Gourmet |
-| Anna Nagar, Chennai | Dhanyam Organic Store |
+| Anna Nagar, Chennai | Dhanyam Organic Store — Anna Nagar |
 | Adyar, Chennai | Dhanyam Organic Superstore |
-| T Nagar, Chennai | Dhanyam Organic Store |
-| R.A. Puram, Chennai | Dhanyam Organic Store |
-| Neelankarai, Chennai | Dhanyam Organic Store |
+| T Nagar, Chennai | Dhanyam Organic Store — T Nagar |
+| R.A. Puram, Chennai | Dhanyam Organic Store — R.A. Puram |
+| Neelankarai, Chennai | Dhanyam Organic Store — Neelankarai |
 | Teynampet, Chennai | Amma Naana Supermarket |
 | ECR, Injambakkam, Chennai | MK Cheese & Gourmet |
 
