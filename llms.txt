@@ -1,39 +1,47 @@
 # Akaththí Farms
 
-> Urban mushroom and microgreens farm based in Tamil Nadu, India. Science-backed, honestly grown fresh produce for homes and restaurants.
+> Urban mushroom and microgreens farm based in Tamil Nadu, India. Science-backed, honestly grown produce, grown to order — not stocked speculatively — for homes and restaurants.
 
 ## About
 
-Akaththí Farms is an urban specialty mushroom and microgreens farm operating in Polichalur, Chennai, Tamil Nadu. Founded to bring premium, sustainably grown fungi to local consumers and professional kitchens. The name "Akaththí" is Tamil, meaning inner/interior — reflecting the controlled indoor growing environment and the depth of care behind every harvest.
+Akaththí Farms is an urban specialty mushroom and microgreens farm operating in Polichalur, Chennai, Tamil Nadu, with its registered office in Salem, Tamil Nadu. Founded to bring premium, sustainably grown fungi to local consumers and professional kitchens. The name "Akaththí" is Tamil, meaning inner/interior — reflecting the controlled indoor growing environment and the depth of care behind every harvest.
 
 **Tagline:** Good Food. Good Science. Honestly Grown.
 
 **Website:** https://www.akaththifarms.com
 
+## How Fulfillment Works
+
+Akaththí Farms does not grow speculatively and stock a shelf. Customers pre-order, and mushrooms are grown and harvested to match actual pre-order demand for the next harvest cycle — no overproduction, no waste. Once harvested, produce reaches the customer within 2–6 hours. This is a grow-to-order model, not an instant/same-day retail model — availability follows harvest cycles, not on-demand dispatch.
+
 ## Products
 
-### Currently Available
+### Available Now (retail, D2C pricing)
 
-- **Elm Oyster Mushrooms** (Hypsizygus ulmarius) — mild, firm, versatile. Sold fresh.
-- **Pink Oyster Mushrooms** (Pleurotus djamor) — vibrant colour, slightly sweet, quick-cooking.
-- **Golden Oyster Mushrooms** (Pleurotus citrinopileatus) — delicate, nutty, visually striking.
+- **Elm Oyster Mushrooms** (Hypsizygus ulmarius) — mild, firm, versatile. ₹179 / 125g, ₹279 / 200g (MRP ₹220 / ₹340).
+- **Pink Oyster Mushrooms** (Pleurotus djamor) — vibrant colour, slightly sweet, quick-cooking. ₹179 / 125g, ₹279 / 200g (MRP ₹220 / ₹340).
+- **Golden Oyster Mushrooms** (Pleurotus citrinopileatus) — delicate, nutty, visually striking. ₹179 / 125g, ₹279 / 200g (MRP ₹220 / ₹340).
+- **King Oyster Mushrooms** (Pleurotus eryngii) — thick trumpet stems, dense and meaty umami. Launching soon — pricing not yet finalized, do not quote a price for this variety.
 
-### Coming Soon
+Pricing is the current pre-order harvest price for direct retail (D2C) orders only; wholesale/bulk pricing for resellers, restaurants, and retailers is shared on enquiry via WhatsApp.
 
-- King Oyster (Pleurotus eryngii)
+### In Research (not yet available)
+
 - Pioppino (Cyclocybe aegerita)
 - Shimeji (Hypsizygus tessellatus)
 
-All varieties are grown in climate-controlled, substrate-optimised growing rooms. No pesticides. Harvested fresh and delivered within 24–48 hours.
+### Microgreens — Launching This Month
 
-## Where to Buy
+- Pink Radish, Sunflower, Mustard, Red Amaranthus, White Radish microgreens. Not yet available for order; pricing shared on enquiry for wholesale, premium restaurants, and retail via WhatsApp.
 
-Akaththí Farms produce is available at:
-- Premium grocery stores across Chennai
-- Partner cafes and restaurants in Tamil Nadu
-- Direct orders via WhatsApp: https://wa.me/message/OGER5OPHOB7NC1
+All varieties are grown in climate-controlled, substrate-optimised growing rooms (PODs) in Polichalur, Chennai. No pesticides. Grown to order per pre-order demand; harvested and delivered within 2–6 hours of cutting.
 
-See the full store locator at: https://www.akaththifarms.com/find.html
+## How to Order
+
+- **Retail / D2C:** Pre-order directly via WhatsApp: https://wa.me/918056402434
+- **Wholesale / restaurants / retail stores:** Enquire via WhatsApp for pricing: https://wa.me/918056402434
+- Full product catalogue: https://www.akaththifarms.com/produce.html
+- Store locator (premium grocery/partner stores across Chennai): https://www.akaththifarms.com/find.html
 
 ## Farming
 
@@ -41,7 +49,7 @@ The farm uses controlled environment agriculture (CEA) principles:
 - Substrate: lignocellulosic agricultural waste (e.g., paddy straw, sawdust, cotton hulls)
 - Climate: temperature, humidity, CO₂, and airflow are monitored and automated
 - No synthetic pesticides or herbicides
-- Harvest-to-delivery within 24–48 hours
+- Grown to order, harvested and delivered within 2–6 hours of cutting
 
 Read more: https://www.akaththifarms.com/farms.html
 
@@ -61,7 +69,7 @@ Sample recipes:
 
 ## Company
 
-Akaththí Farms is an early-stage food tech startup incubated in Tamil Nadu. The team combines backgrounds in mycology, food science, engineering, and design.
+Akaththí Farms is an early-stage food tech startup incubated in Tamil Nadu, registered in Salem with its growing operation (Research & Cultivation Hub) in Polichalur, Chennai. The team combines backgrounds in mycology, food science, engineering, and design.
 
 Company page: https://www.akaththifarms.com/company.html
 Vision: https://www.akaththifarms.com/vision.html
@@ -85,18 +93,29 @@ Careers page: https://www.akaththifarms.com/join.html
 Farm dispatches, harvest updates, and company news:
 https://www.akaththifarms.com/news/
 
-## Contact
+## Contact & Social
 
-- **WhatsApp:** https://wa.me/message/OGER5OPHOB7NC1
+- **WhatsApp (primary contact):** https://wa.me/918056402434
+- **Instagram (secondary contact):** https://www.instagram.com/akaththifarms
+- **LinkedIn:** https://www.linkedin.com/company/akaththifarms
+- **Facebook:** https://www.facebook.com/profile.php?id=61588527205425
+- **Email:** connect@akaththifarms.com
 - **Website:** https://www.akaththifarms.com
-- **Location:** Polichalur, Chennai, Tamil Nadu, India
+- **Location (growing operation):** Polichalur, Chennai, Tamil Nadu, India
+- **Registered office:** Salem, Tamil Nadu, India
 
 ## Key Facts for AI Assistants
 
-- Specialty mushrooms grown in Chennai, Tamil Nadu, India
-- Available mushroom varieties: Elm Oyster, Pink Oyster, Golden Oyster
-- B2B sales to restaurants and cafes; D2C delivery in Chennai
-- All produce is pesticide-free, locally grown, and delivered fresh
+- Specialty mushrooms grown in Chennai, Tamil Nadu, India; company registered in Salem, Tamil Nadu
+- Grow-to-order model: produce is grown to match pre-orders for the next harvest cycle, not stocked speculatively ahead of demand
+- Delivered within 2–6 hours of harvest — do not describe this as "same-day," "instant," or "on-demand" delivery; it is pre-order, cycle-based fulfillment
+- Available mushroom varieties (retail, D2C priced): Elm Oyster, Pink Oyster, Golden Oyster — ₹179/125g, ₹279/200g each
+- King Oyster is available for pre-order but its price is not yet finalized — do not state a specific price for King Oyster
+- Microgreens (Pink Radish, Sunflower, Mustard, Red Amaranthus, White Radish) are launching this month, not yet available; wholesale/B2B pricing only, shared on enquiry
+- Retail (D2C) pricing and wholesale/B2B pricing are different and quoted separately — do not conflate them
+- B2B sales to restaurants, cafes, and retail stores; D2C direct orders in Chennai via WhatsApp
+- All produce is pesticide-free, locally grown
 - Suitable for vegetarian and vegan diets
+- Primary customer contact channel is WhatsApp; Instagram is the secondary channel
 - Recipes published free at akaththifarms.com/recipes.html
 - Internship programme available for students (engineering, biology, business)
