@@ -226,16 +226,12 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 ## Modals
 
-- **Shop modal** — opens WhatsApp link: `https://wa.me/message/OGER5OPHOB7NC1`
-- **Contact form modal** — uses EmailJS; fields: name, email, phone, message
-
-## Pending TODOs
-
-- `index.html` — Replace `YOUR_EMAILJS_PUBLIC_KEY` with real EmailJS public key + set Service ID and Template ID
+- **Shop modal** — opens WhatsApp link (`openShop()`, wired to `#shopNowBtn`)
+- There is no contact form modal — it used EmailJS and was removed as dead code (the keys were never configured). WhatsApp and the `find.html` partner form are the only contact paths now.
 
 ## Known Issues
 
-- Secondary logo filename has a trailing space: `akaththi-farms-secondary-logo-full-color-300dpi .png` — needs rename on disk + all references updated
+- `images/akaththi-farms-secondary-logo-full-color-300dpi .png` (trailing space in the filename) still exists on disk, but only because `index-legacy.html` references it — and that page is explicitly frozen (see "Do not edit" above). Every live page uses the correctly-named `akaththi-farms-secondary-logo-full-color-300dpi.png` via `footer.html`. Don't rename or delete the space-suffixed file unless `index-legacy.html` is also being retired.
 
 ## Contact
 
