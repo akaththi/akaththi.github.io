@@ -1,6 +1,6 @@
 ---
 name: add-recipe
-description: Add a new recipe to the Akaththi Farms site — creates the HTML fragment and registers it in the recipes data file. Use when the user wants to add a mushroom recipe.
+description: Add a new recipe to the Akaththi Farms site — creates a standalone indexable recipe page and registers it in the recipes data file. Use when the user wants to add a mushroom recipe.
 argument-hint: "<recipe-name> [category]"
 allowed-tools: Read, Write, Edit, Glob, Grep
 ---
@@ -16,20 +16,21 @@ Add a new recipe to the Akaththi Farms site. The user may provide the recipe nam
 - Variety label (e.g. "Elm Oyster / Pink Oyster")
 - Cook time in minutes, difficulty (`Easy` / `Medium` / `Hard` / `Advanced`), serves count
 - Card description — 1–2 sentences in brand voice (earthy-premium, declarative)
-- Image filename (e.g. `milagu-varuval.jpg`) — note: the image filename does NOT always match the recipe slug exactly
 - imgFallback gradient — pick colours that match the dish. Use the pattern `linear-gradient(135deg,#XXXXXX 0%,#YYYYYY 100%)`
 - Full ingredients list and method steps
 
-**For `chef` section only:** chef's first name + a one-sentence chef's note in quotes  
+**For `chef` section only:** chef's first name + a one-sentence chef's note in quotes
 **For `customer` section only:** customer's full name + location (e.g. "Adyar, Chennai")
 
-## Step 1 — Create the HTML fragment
+## Step 1 — Create the standalone recipe page
 
-Create `recipes/<category>/<slug>.html`. This is a **content fragment only** — no `<html>`, no `<head>`, no `<body>`. It is loaded by JS into a slide panel on `recipes.html`.
+Each recipe lives at `recipes/<category>/<slug>.html` as a **complete, independently indexable page** — own `<title>`, meta description, canonical URL, OG/Twitter tags, and `Recipe` + `BreadcrumbList` JSON-LD — not a bare fragment. This matters for SEO: each recipe needs its own crawlable, indexable URL rather than sharing one canonical with every other recipe.
 
-Structure:
+Copy the full structure of an existing recipe page (e.g. `recipes/south-indian/mushroom-biryani.html`) as your template, then adjust:
+- `<title>`, meta description, canonical, OG/Twitter tags, and the JSON-LD `Recipe` object (`name`, `image`, `description`, `recipeCuisine`, `totalTime` as `PT<minutes>M`, `recipeYield` as `"<serves> servings"`, `keywords` from tags, `recipeIngredient` array, `recipeInstructions` array of `{"@type":"HowToStep","text":"..."}`) and `BreadcrumbList` (Home → Recipes → this recipe's title/URL)
+- The visible hero, meta row (Time/Difficulty/Serves/Cuisine), and description paragraph
+- The `<div class="recipe-body">` block itself — keep this class name exactly. It contains:
 ```html
-<!-- recipe-body: content loaded into slide panel -->
 <div class="recipe-body">
 
 <div class="panel-section-title">Ingredients</div>
@@ -55,10 +56,13 @@ Structure:
 
 </div>
 ```
+**Do not remove or rename `.recipe-body`** — `recipes.html`'s slide-in panel fetches this same file and extracts that div's contents to render in-page (via `innerHTML` parsing, which safely drops the surrounding `<html>`/`<head>`/`<body>` when injected into a `<div>`). Breaking that class breaks the in-page browsing experience.
+
+For the hero image / JSON-LD `image`, use a real file that exists on disk — map the primary variety to `/images/elm-oyster.png`, `/images/golden-oyster.png`, `/images/pink-oyster.png`, or `/images/mushroom.webp` (grey oyster / mixed varieties have no dedicated photo yet). Don't invent a recipe-specific photo path that doesn't exist — that creates a broken image reference crawlers and rich-result validators will flag.
 
 ## Step 2 — Register in the data file
 
-Read `recipes/_data/recipes.js` first. Add one object to the `RECIPES` array inside the correct cuisine comment section. Use the exact shape below — include only the fields relevant to the section type.
+Read `recipes/_data/recipes.js` first. Add one object to the `RECIPES` array inside the correct cuisine comment section. Use the exact shape below — include only the fields relevant to the section type. The `img`/`imgFallback` here drive the card thumbnail on `recipes.html`, independent of the JSON-LD image on the standalone page.
 
 ### For `section: "grid"` (standard recipe):
 ```js
@@ -74,8 +78,6 @@ Read `recipes/_data/recipes.js` first. Add one object to the `RECIPES` array ins
   difficulty: "<Easy|Medium|Hard>",
   serves: <number>,
   desc: "<card description — 1–2 sentences in brand voice>",
-  img: "recipes/images/<category>/<image-filename>.jpg",
-  imgCredit: "<Source name if known>",   // omit if unknown
   imgFallback: "linear-gradient(135deg,#XXXXXX 0%,#YYYYYY 100%)",
   file: "recipes/<category>/<slug>.html",
   section: "grid",
@@ -97,7 +99,6 @@ Read `recipes/_data/recipes.js` first. Add one object to the `RECIPES` array ins
   difficulty: "<Medium|Advanced>",
   serves: <number>,
   desc: "<card description>",
-  img: "recipes/images/chef-specials/<image>.jpg",
   imgFallback: "linear-gradient(135deg,#XXXXXX 0%,#YYYYYY 100%)",
   file: "recipes/chef-specials/<slug>.html",
   section: "chef",
@@ -121,7 +122,6 @@ Read `recipes/_data/recipes.js` first. Add one object to the `RECIPES` array ins
   difficulty: "<Easy|Medium>",
   serves: <number>,
   desc: "<First-person teaser — quote the customer's voice>",
-  img: "recipes/images/customer-stories/<image>.jpg",
   imgFallback: "linear-gradient(135deg,#XXXXXX 0%,#YYYYYY 100%)",
   file: "recipes/customer-stories/<slug>.html",
   section: "customer",
@@ -141,10 +141,16 @@ Read `recipes/_data/recipes.js` first. Add one object to the `RECIPES` array ins
 - Chef Specials: `tasting`, `advanced`, `fusion`, `trending`
 - Customer Stories: family names of dishes, `quick`, `umami`
 
-## Step 3 — Confirm
+## Step 3 — Add to the recipes.html ItemList and sitemap
+
+`recipes.html` carries its own `ItemList` JSON-LD in a `<script type="application/ld+json">` block — add a new `{"@type": "ListItem", ...}` entry with the next `position` number and bump `numberOfItems` by 1.
+
+Add a `<url>` entry for the new page to `sitemap.xml` in the matching cuisine section, with today's date as `lastmod`.
+
+## Step 4 — Confirm
 
 Tell the user:
-- Recipe fragment is at `recipes/<category>/<slug>.html`
-- Registered in `recipes/_data/recipes.js` — appears live on `recipes.html` immediately
-- No image required to work — `imgFallback` gradient displays until `recipes/images/<category>/<filename>.jpg` is added
+- The standalone page is at `recipes/<category>/<slug>.html` — independently indexable, with its own title/canonical/Recipe schema
+- Registered in `recipes/_data/recipes.js` — appears live on `recipes.html`'s grid/panel immediately
+- Added to `recipes.html`'s `ItemList` schema and `sitemap.xml`
 - If they want it in the top showreel on `recipes.html`, add its `id` to the `FEATURED_IDS` array in `recipes/_data/featured.js` (max 4 items; first item is the hero card)

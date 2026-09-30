@@ -138,11 +138,14 @@ Inspired by **Bowery Farming's** editorial brand style — but warmer and more r
 
 ## How to Add a Recipe
 
-1. Create `recipes/<category>/<slug>.html` — this file is a **fragment only** (no `<html>`, no `<head>`), loaded into the panel by `recipes.html` via JS
-2. Structure: `<div class="recipe-body">` → `<div class="panel-section-title">Ingredients</div>` → `<ul class="panel-ingredients">` → `<div class="panel-section-title">Method</div>` → `<ol class="panel-steps">` → optional `<div class="panel-chef-note">`
-3. Add the recipe card to `recipes.html` — find the `recipes-grid` section and copy an existing `<a class="rc" href="recipes.html?recipe=<slug>">` card
-4. Categories available: `south-indian`, `north-indian`, `indo-chinese`, `continental`, `japanese-korean`, `rolls-grills-bbq`, `chef-specials`, `customer-stories`
-5. Also add a teaser card in `index.html` recipes section if it's a featured recipe
+Use the `add-recipe` skill (`.claude/skills/add-recipe/SKILL.md`) — it walks through all steps below.
+
+1. Create `recipes/<category>/<slug>.html` as a **complete, standalone page** (own `<title>`, canonical, OG/Twitter tags, `Recipe` + `BreadcrumbList` JSON-LD) — not a bare fragment. Each recipe must be independently indexable by Google, not share one canonical URL with every other recipe.
+2. Inside that page, keep a `<div class="recipe-body">` block with the ingredients/method content: `<div class="panel-section-title">Ingredients</div>` → `<ul class="panel-ingredients">` → `<div class="panel-section-title">Method</div>` → `<ol class="panel-steps">` → optional `<div class="panel-chef-note">`. `recipes.html`'s slide-in panel fetches this same file and extracts `.recipe-body` to render in-page — don't rename that class.
+3. Register the recipe as an object in `recipes/_data/recipes.js` (`RECIPES` array) — this drives the grid/panel/filter UI on `recipes.html`.
+4. Add a `ListItem` entry to `recipes.html`'s own `ItemList` JSON-LD, and a `<url>` entry to `sitemap.xml`.
+5. Categories available: `south-indian`, `north-indian`, `indo-chinese`, `continental`, `japanese-korean`, `rolls-grills-bbq`, `chef-specials`, `customer-stories`
+6. Also add a teaser card in `index.html` recipes section if it's a featured recipe, and its `id` to `recipes/_data/featured.js` for the showreel
 
 ## How to Add a Job
 
@@ -154,8 +157,12 @@ Inspired by **Bowery Farming's** editorial brand style — but warmer and more r
 
 ## How to Add a News Article
 
-1. Edit `news/article.html` (currently a single reusable template — update content in place or duplicate for a new article)
-2. Add article card to `news/index.html` and to the `#news` section on `index.html`
+Use the `add-news` skill (`.claude/skills/add-news/SKILL.md`) — it walks through all steps below.
+
+1. Create `news/<slug>.html` as a **complete, standalone page** (own `<title>`, canonical, OG/Twitter tags, `NewsArticle` + `BreadcrumbList` JSON-LD) — not a shared template read via `?slug=`. Each article must be independently indexable, not share one canonical URL with every other article. `news/article.html` is now only a legacy redirect shim for old `?slug=` links — don't add new content there.
+2. Register the article as an object in `news/_data/news.js` (`NEWS` array, newest first) — this drives the `news/index.html` listing and filter buttons.
+3. Add a `ListItem` entry to `news/index.html`'s `ItemList` JSON-LD, and a `<url>` entry to `sitemap.xml`.
+4. Also add a card to the `#news` section on `index.html` if it should appear in that homepage teaser.
 
 ## How to Add a Store Location (find.html)
 

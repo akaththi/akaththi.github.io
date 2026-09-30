@@ -21,6 +21,32 @@
 <meta name="twitter:description" content="Dispatches from the farm. Harvests, science, company news.">
 <meta name="twitter:image" content="https://www.akaththifarms.com/images/akaththi-farms-primary-logo-300dpi.png">
 <meta name="theme-color" content="#1B3F20">
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://www.akaththifarms.com/news/",
+      "name": "News &amp; Updates — Akaththí Farms",
+      "description": "Dispatches from the farm. Harvests, science, company news — all updates from Akaththí Farms.",
+      "isPartOf": {"@id": "https://www.akaththifarms.com/#website"},
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Akaththí Farms News & Updates",
+      "numberOfItems": 3,
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "url": "https://www.akaththifarms.com/news/golden-oyster-first-harvest.html", "name": "Our first Golden Oyster harvest"},
+        {"@type": "ListItem", "position": 2, "url": "https://www.akaththifarms.com/news/beta-glucans-freshness.html", "name": "Beta-glucans, immunity and why freshness matters"},
+        {"@type": "ListItem", "position": 3, "url": "https://www.akaththifarms.com/news/crescent-ciic-incubation.html", "name": "Akaththí Farms joins Crescent CIIC incubation programme"}
+      ]
+    }
+  ]
+}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ3J83K6JX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FZ3J83K6JX');</script>
 <link rel="stylesheet" href="/styles.css">
@@ -125,7 +151,7 @@
   // Render all cards
   NEWS.forEach(function(n){
     var a = document.createElement('a');
-    a.href = 'article.html?slug=' + n.slug;
+    a.href = n.slug + '.html';
     a.className = 'nc';
     a.dataset.tag = n.tag;
     a.innerHTML =
