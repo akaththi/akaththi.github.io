@@ -129,12 +129,15 @@ Inspired by **Bowery Farming's** editorial brand style — but warmer and more r
 
 | Location | Store |
 |---|---|
-| Anna Nagar, Chennai | JK Cheese & More |
-| Anna Nagar, Chennai | Dhanyam Organic Store |
+| Anna Nagar, Chennai | MK Cheese & Gourmet |
+| Anna Nagar, Chennai | Dhanyam Organic Store — Anna Nagar |
 | Adyar, Chennai | Dhanyam Organic Superstore |
-| Teynampet, Chennai | Amma Naana Supermarket |
-| Nungambakkam, Chennai | JK Cheese & More |
-| ECR, Injambakkam, Chennai | JK Cheese & More |
+| T Nagar, Chennai | Dhanyam Organic Store — T Nagar |
+| R.A. Puram, Chennai | Dhanyam Organic Store — R.A. Puram |
+| Neelankarai, Chennai | Dhanyam Organic Store — Neelankarai |
+| ECR, Injambakkam, Chennai | MK Cheese & Gourmet |
+
+Note: "JK Cheese & More" was rebranded to "MK Cheese & Gourmet" (Sept 2026). Its Anna Nagar and ECR/Injambakkam outlets use the new name; the Nungambakkam outlet has closed and was removed from the list.
 
 ## How to Add a Recipe
 
